@@ -74,7 +74,7 @@
                ]
             },
             "date_updated":"2021-05-30T03:42:03.009Z",
-            "id":"60b3095eecdad660eb9d3263"
+            "id":"1"
         },
         {
             "name":"Fresho Beetroot, 500 g",
@@ -150,7 +150,7 @@
                ]
             },
             "date_updated":"2021-05-30T03:42:03.070Z",
-            "id":"60b3080219f8ea212d50fabf"
+            "id":"2"
         },
         {
             "name":"Fresho Capsicum 500 g",
@@ -226,7 +226,7 @@
                ]
             },
             "date_updated":"2021-05-30T03:42:03.032Z",
-            "id":"60b30766abf05f198bb51e7f"
+            "id":"3"
         },
         {
             "name":"Fresho Brinjal  500 g",
@@ -302,7 +302,7 @@
                ]
             },
             "date_updated":"2021-05-30T03:42:03.040Z",
-            "id":"60b306aa021ada2037c76e1e"
+            "id":"4"
         },
         {
             "name":"Fresho Carrot  500 g",
@@ -378,7 +378,7 @@
                ]
             },
             "date_updated":"2021-05-30T03:42:03.033Z",
-            "id":"60b30401e2893c123e229e8e"
+            "id":"5"
         },
         {
             "name":"Fresho Potato, 1 kg",
@@ -454,7 +454,7 @@
                ]
             },
             "date_updated":"2021-05-30T03:42:03.046Z",
-            "id":"60b30346f6496750bba94300"
+            "id":"6"
         },
         {
             "name":"Fresho Lemon, 250 g",
@@ -530,7 +530,7 @@
                ]
             },
             "date_updated":"2021-05-30T03:42:03.029Z",
-            "id":"60b30284f6496750bba93b3b"
+            "id":"7"
         },
         {
             "name":"Fresho Watermelon 1 pc",
@@ -606,7 +606,7 @@
                ]
             },
             "date_updated":"2021-05-30T03:42:03.036Z",
-            "id":"60b3019a07fe3b078d687868"
+            "id":"8"
         },
         {
             "name":"Fresho Drumstick 250 g",
@@ -682,7 +682,7 @@
                ]
             },
             "date_updated":"2021-05-30T01:41:35.545Z",
-            "id":"60b2ed04efb39e09f15c79cd"
+            "id":"9"
         },
         {
             "name":"Fresho Broccoli, 1 pc",
@@ -758,7 +758,7 @@
                ]
             },
             "date_updated":"2021-05-30T01:41:35.557Z",
-            "id":"60b2ec608d7d900a45b6a162"
+            "id":"10"
         },
         {
             "name":"Fresho Tomato",
@@ -834,7 +834,7 @@
                ]
             },
             "date_updated":"2021-05-30T01:41:35.558Z",
-            "id":"60b2ebc5f7966b0ed1072503"
+            "id":"11"
         },
         {
             "name":"Fresho Cauliflower",
@@ -910,7 +910,7 @@
                ]
             },
             "date_updated":"2021-05-30T01:41:35.564Z",
-            "id":"60b2eb24b600ad60a38ef138"
+            "id":"12"
         },
         {
             "name":"Fresho Onion",
@@ -956,7 +956,7 @@
                
             ],
             "variable":false,
-            "description":"<ul><li>Onion is a vegetable which is almost like a staple in Indian food. This is also known to be one of the essential ingredients of raw salads. They come in different colours like white, red or yellow and are quite in demand in cold salads and hot soups.</li><li>You can dice, slice or cut it in rings and put it in burgers and sandwiches. Onions emit a sharp flavour and fragrance once they are fried; it is due to the sulphur compound in the vegetable.Onions are known to be rich in biotin.</li></ul>",
+            "description":"Onion is a vegetable which is almost like a staple in Indian food. This is also known to be one of the essential ingredients of raw salads. They come in different colours like white, red or yellow and are quite in demand in cold salads and hot soups.You can dice, slice or cut it in rings and put it in burgers and sandwiches. Onions emit a sharp flavour and fragrance once they are fried; it is due to the sulphur compound in the vegetable.Onions are known to be rich in biotin.",
             "tags":[
                
             ],
@@ -986,7 +986,7 @@
                ]
             },
             "date_updated":"2021-05-30T01:41:35.530Z",
-            "id":"60b2ea7e50e5b55ca85836f6"
+            "id":"13"
         },
         {
             "name":"Fresho Raspuri Mango",
@@ -1062,7 +1062,7 @@
                ]
             },
             "date_updated":"2021-05-30T01:41:35.549Z",
-            "id":"60b2e9f5b600ad60a38ee755"
+            "id":"14"
         },
         {
             "name":"Fresho Pomegranate",
@@ -1137,7 +1137,7 @@
                ]
             },
             "date_updated":"2021-05-30T01:41:35.561Z",
-            "id":"60b2e691f2095a7be2252bba"
+            "id":"15"
         },
         {
             "name": "Fresho Grapes - Sonaka Seedless",
@@ -1207,7 +1207,7 @@
                 "60b1fb304a48b82c2efbad1d"
               ]
             },
-            "id": "60b2e1adefb39e09f15994ba"
+            "id": "16"
         },
         {
             "name": "Fresho Orange",
@@ -1277,7 +1277,7 @@
               ]
             },
             "date_updated": "2021-05-30T01:41:35.543Z",
-            "id": "60b2e3da81eb4a13a2f62813"
+            "id": "17"
         },
         {
             "name": "Fresho Pear - Green",
@@ -1347,7 +1347,7 @@
               ]
             },
             "date_updated": "2021-05-30T01:41:35.550Z",
-            "id": "60b2e49e8d7d900a45b4e0b0"
+            "id": "18"
         },
         {
             "name": "Fresho Blueberry, 125 g",
@@ -1417,7 +1417,7 @@
                 "60b1fb304a48b82c2efbad1d"
               ]
             },
-            "id": "60b2e598f2095a7be2252a6e"
+            "id": "19"
         }
     ],
     "snacks":[
@@ -1494,7 +1494,7 @@
                ]
             },
             "date_updated":"2021-05-30T05:30:04.657Z",
-            "id":"60b322b37dfaee22b6d76108"
+            "id":"1"
          },
          {
             "name":"Lays Potato Chips",
@@ -1569,7 +1569,7 @@
                ]
             },
             "date_updated":"2021-05-30T05:30:04.663Z",
-            "id":"60b32241af5cd517280b3a14"
+            "id":"2"
          },
          {
             "name":"McCain Potato Bites",
@@ -1644,7 +1644,7 @@
                ]
             },
             "date_updated":"2021-05-30T05:30:04.672Z",
-            "id":"60b321e9ecdad660eb9e87cb"
+            "id":"3"
          },
          {
             "name":"Doritos Nachos Cheese",
@@ -1719,7 +1719,7 @@
                ]
             },
             "date_updated":"2021-05-30T05:30:04.675Z",
-            "id":"60b3218baf5cd517280acff7"
+            "id":"4"
          },
          {
             "name":"MTR Gulab Jamun",
@@ -1794,7 +1794,7 @@
                ]
             },
             "date_updated":"2021-05-30T05:30:04.699Z",
-            "id":"60b32131f6496750bbaa7855"
+            "id":"5"
          },
          {
             "name":"Paper Boat Aam Papad",
@@ -1869,7 +1869,7 @@
                ]
             },
             "date_updated":"2021-05-30T05:30:04.706Z",
-            "id":"60b320bbe2893c123e23b091"
+            "id":"6"
          },
          {
             "name":"Hersheys Kisses - Milk Chocolate,",
@@ -1945,7 +1945,7 @@
                   "60b31e3df6496750bbaa6054"
                ]
             },
-            "id":"60b3201bf53e4a1d7c2903e2"
+            "id":"7"
          },
          {
             "name":"Amul Sugar Free Dark Chocolate",
@@ -2020,7 +2020,7 @@
                ]
             },
             "date_updated":"2021-05-30T05:30:04.668Z",
-            "id":"60b31fcbecdad660eb9e73ba"
+            "id":"8"
          },
          {
             "name":"Nestle Kitkat Fingers Share Bag",
@@ -2095,7 +2095,7 @@
                ]
             },
             "date_updated":"2021-05-30T05:30:04.686Z",
-            "id":"60b31f556045bb73933017ef"
+            "id":"9"
          }
     ]
 }
