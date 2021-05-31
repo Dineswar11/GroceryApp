@@ -1,1 +1,46 @@
-<p>cart works!</p>
+
+<h2 class="text-center m-4">SHOPPING CART <i class="fas fa-shopping-cart"></i></h2>
+
+<div class="container bg-light shadow">
+  
+    
+  
+  <div  class="card m-3 mx-auto">
+    <div class="card-body">
+      
+        <div class="row">
+       
+          <div class="col-sm-6 mt-2 p-1">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgZurDk__8IrfDTYzJkqgkQ8PE1GN1RClpgw&usqp=CAU" width="100%" alt="">
+          </div>
+           
+          <div class="col-sm-6 mt-2 p-1">
+            <h3>Mango</h3>
+            <hr>
+            <h6 class="text-warning">Price: Rs.70</h6>
+            <h6 class="text-danger">Sale price: Rs.50</h6>
+            <div class="text-right d-block mx-auto">
+              <button id="btn" class="btn btn-outline-danger" *ngIf="quantity>1" (click)="quantity=quantity-1;">
+                <i class="fas fa-minus-square"></i>
+              </button>
+              <span class="ms-2 me-2">Quantity  {{quantity}}</span>
+              <button id="btn" class="btn btn-outline-success" (click)="quantity=quantity+1">
+                 <i class="fas fa-plus-square"></i>
+              </button> 
+            </div>
+            <hr>
+            <h4 id="k">Total price: {{saleprice*quantity}}</h4>
+         </div>
+
+           
+      </div> 
+    
+    
+      
+    </div>
+  </div>
+
+  
+
+</div>
+
