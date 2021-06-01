@@ -13,7 +13,8 @@ const routes: Routes = [
   {path:'product-details',component:ProductDetailsComponent},
   {path:'fruits-vegitables',component:FruitsVegitablesComponent},
   {path:'fruits-vegitables/:id',component:ProductDetailsComponent},
-  {path:'snacks/:id',component:ProductDetailsComponent}
+  {path:'snacks/:id',component:ProductDetailsComponent},
+  {path:'',redirectTo:'home',pathMatch:'full'}
 ]
 
 @NgModule({
