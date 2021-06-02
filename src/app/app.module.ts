@@ -12,6 +12,7 @@ import { ProductCardComponent } from './product-card/product-card.component';
 import { CartComponent } from './cart/cart.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { HttpClientModule} from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -23,12 +24,14 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
     ProductCardComponent,
     CartComponent,
     ProductDetailsComponent,
-    PagenotfoundComponent
+    PagenotfoundComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

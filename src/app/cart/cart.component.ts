@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { opacity } from '../animation';
+
 
 @Component({
   selector: 'app-cart',
@@ -9,12 +11,11 @@ import { opacity } from '../animation';
 })
 export class CartComponent implements OnInit {
 
-  constructor() { 
-    
-  }
+  
 
-
+  constructor() { }
   ngOnInit(): void {
+    
   }
 
   quantity:number = 1;
