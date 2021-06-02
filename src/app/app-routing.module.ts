@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CartComponent } from './cart/cart.component';
 import { FruitsVegitablesComponent } from './fruits-vegitables/fruits-vegitables.component';
 import { HomeComponent } from './home/home.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { SnacksComponent } from './snacks/snacks.component';
 
@@ -14,7 +15,8 @@ const routes: Routes = [
   {path:'fruits-vegitables',component:FruitsVegitablesComponent},
   {path:'fruits-vegitables/:id',component:ProductDetailsComponent},
   {path:'snacks/:id',component:ProductDetailsComponent},
-  {path:'',redirectTo:'home',pathMatch:'full'}
+  {path:'',redirectTo:'home',pathMatch:'full'},
+  {path:'**',component:PagenotfoundComponent}
 ]
 
 @NgModule({
