@@ -22,4 +22,9 @@
               </div>
         </div>
     </div>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 mt-1">
+        <div class="col mt-4" *ngFor='let snacks of snacksData'>
+            <app-product-card [productData]=snacks ></app-product-card>
+        </div>
+    </div>
 </div>

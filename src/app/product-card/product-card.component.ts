@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { opacity, popup } from '../animation';
 
 @Component({
@@ -11,11 +11,20 @@ export class ProductCardComponent implements OnInit {
 
   displayImage2:boolean=false;
 
-  displayButton:boolean=false
+  displayButton:boolean=false;
+
+  discount:number;
 
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.productData)
+  
+    this.discount=((this.productData.price-this.productData.sale_price)*100)/this.productData.price;
+  
   }
+
+  //recieving data from parent
+  @Input() productData:any;
 
 }

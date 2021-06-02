@@ -29,6 +29,7 @@
     position: absolute;
     padding: 0.25rem;
     top: 2.5%;
+    left:65%;
     border:3px solid gold;
     border-right: 0px solid white;
 }
