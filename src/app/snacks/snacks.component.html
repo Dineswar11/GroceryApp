@@ -1,1 +1,25 @@
-<p>snacks works!</p>
+<div class="container mt-2 mb-5">
+    <div class="d-flex flex-row justify-content-between">
+        <div class="inputs mt-3">
+            <div *ngIf='showFilterByTitle'>
+                <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <div *ngIf='!showFilterByTitle'>
+                <input type="text" class="w-50" placeholder="Min" style="padding: 1%;">
+                <input type="text" class="w-50" placeholder="Max" style="padding: 1%;">
+            </div>
+        </div>
+        <div class="filter-by mt-3">
+            <div class="dropdown">
+                <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                  Filter By
+                </button>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li><button class="dropdown-item active" (click)='showFilterByTitle=true' >Name</button></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><button class="dropdown-item" (click)='showFilterByTitle=false'>Price</button></li>
+                </ul>
+              </div>
+        </div>
+    </div>
+</div>
