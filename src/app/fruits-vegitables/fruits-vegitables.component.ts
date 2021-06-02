@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FruitsVegitablesComponent implements OnInit {
 
+  showFilterByTitle:boolean=true
+
   constructor() { }
 
   ngOnInit(): void {

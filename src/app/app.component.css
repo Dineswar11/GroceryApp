@@ -1,3 +1,7 @@
+nav{
+    box-shadow: 0px 5px 5px gray;
+}
+
 .shop,.cart{
     position: relative;
 }
