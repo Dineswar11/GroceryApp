@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 import { opacity } from '../animation';
 import { fruitsvegitablesArr } from '../Models/fruits-vegitables.model';
 import { FruitsVegitablesService } from '../Services/fruits-vegitables.service';
@@ -9,23 +10,29 @@ import { FruitsVegitablesService } from '../Services/fruits-vegitables.service';
   templateUrl: './fruits-vegitables.component.html',
   styleUrls: ['./fruits-vegitables.component.css']
 })
-export class FruitsVegitablesComponent implements OnInit {
+export class FruitsVegitablesComponent implements OnInit,OnDestroy {
 
   showFilterByTitle:boolean=true
-  myProducts:fruitsvegitablesArr[]=[];
+
+  fruitsVegetablesData:fruitsvegitablesArr[]=[];
+
+  subscription:Subscription;
 
   constructor(private frObj:FruitsVegitablesService,private router:Router) { }
 
   ngOnInit(): void {
-    this.frObj.getFruitsAndVegitables().subscribe(
+    this.subscription = this.frObj.getFruitsAndVegitables().subscribe(
       products=>{
-        this.myProducts=products;
-        console.log(this.myProducts);
-      },
+        this.fruitsVegetablesData=products;
+      },  
       err=>{
         console.log("error is",err)
       }
-      )
+    )
+  }
+
+  ngOnDestroy():void{
+    this.subscription.unsubscribe()
   }
 
 }
