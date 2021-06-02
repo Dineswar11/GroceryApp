@@ -40,14 +40,8 @@
             "sale":false,
             "price":60,
             "sale_price":45,
-            "prices":[
-               
-            ],
             "variable":false,
             "description":"Buttom mushrooms are very small sized mushrooms with smooth round caps and short stems. They have a mild flavour with a good texture that becomes more fragrant and meaty when cooked.<br>",
-            "tags":[
-               
-            ],
             "meta_title":null,
             "meta_description":null,
             "slug":"fresho-mushrooms-1-pack",
@@ -57,22 +51,11 @@
             },
             "type":"standard",
             "stock_tracking":false,
-            "options":[
-               
-            ],
             "currency":"INR",
             "delivery":"shipment",
             "tax_class":"standard",
             "date_created":"2021-05-30T03:41:18.492Z",
             "stock_status":null,
-            "category_index":{
-               "sort":{
-                  "60b1fb304a48b82c2efbad1d":0
-               },
-               "id":[
-                  "60b1fb304a48b82c2efbad1d"
-               ]
-            },
             "date_updated":"2021-05-30T03:42:03.009Z",
             "id":"1"
         },
@@ -116,14 +99,8 @@
             "sale":false,
             "price":22,
             "sale_price":11,
-            "prices":[
-               
-            ],
             "variable":false,
             "description":"These edible ruby red roots are smooth and bulbous and have the highest sugar content than any other vegetable.",
-            "tags":[
-               
-            ],
             "meta_title":null,
             "meta_description":null,
             "slug":"fresho-beetroot-500-g",
@@ -133,22 +110,11 @@
             },
             "type":"standard",
             "stock_tracking":false,
-            "options":[
-               
-            ],
             "currency":"INR",
             "delivery":"shipment",
             "tax_class":"standard",
             "date_created":"2021-05-30T03:35:30.770Z",
             "stock_status":null,
-            "category_index":{
-               "sort":{
-                  "60b1fb304a48b82c2efbad1d":0
-               },
-               "id":[
-                  "60b1fb304a48b82c2efbad1d"
-               ]
-            },
             "date_updated":"2021-05-30T03:42:03.070Z",
             "id":"2"
         },
@@ -192,14 +158,8 @@
             "sale":false,
             "price":25,
             "sale_price":12,
-            "prices":[
-               
-            ],
             "variable":false,
             "description":"Leaving a moderately pungent taste on the tongue, Green capsicums, also known as green peppers are bell shaped, medium-sized fruit pods.<br>They have thick and shiny skin with a fleshy texture inside.",
-            "tags":[
-               
-            ],
             "meta_title":null,
             "meta_description":null,
             "slug":"fresho-capsicum-500-g",
@@ -209,22 +169,11 @@
             },
             "type":"standard",
             "stock_tracking":false,
-            "options":[
-               
-            ],
             "currency":"INR",
             "delivery":"shipment",
             "tax_class":"standard",
             "date_created":"2021-05-30T03:32:54.911Z",
             "stock_status":null,
-            "category_index":{
-               "sort":{
-                  "60b1fb304a48b82c2efbad1d":0
-               },
-               "id":[
-                  "60b1fb304a48b82c2efbad1d"
-               ]
-            },
             "date_updated":"2021-05-30T03:42:03.032Z",
             "id":"3"
         },
@@ -268,14 +217,8 @@
             "sale":false,
             "price":25,
             "sale_price":20,
-            "prices":[
-               
-            ],
             "variable":false,
             "description":"Deep purple and oval shaped bottle brinjals are glossy skinned vegetables with a white and have a soft flesh.",
-            "tags":[
-               
-            ],
             "meta_title":null,
             "meta_description":null,
             "slug":"fresho-brinjal-500-g",
@@ -285,22 +228,11 @@
             },
             "type":"standard",
             "stock_tracking":false,
-            "options":[
-               
-            ],
             "currency":"INR",
             "delivery":"shipment",
             "tax_class":"standard",
             "date_created":"2021-05-30T03:29:46.675Z",
             "stock_status":null,
-            "category_index":{
-               "sort":{
-                  "60b1fb304a48b82c2efbad1d":0
-               },
-               "id":[
-                  "60b1fb304a48b82c2efbad1d"
-               ]
-            },
             "date_updated":"2021-05-30T03:42:03.040Z",
             "id":"4"
         },
@@ -344,14 +276,8 @@
             "sale":false,
             "price":40,
             "sale_price":15,
-            "prices":[
-               
-            ],
             "variable":false,
             "description":"A popular sweet-tasting root vegetable, Carrots are narrow and cone shaped.<br>They have thick, fleshy, deeply colored root, which grows underground, and feathery green leaves that emerge above the ground.<br>While these greens are fresh tasting and slightly bitter, the carrot roots are crunchy textured with a sweet and minty aromatic taste.<br>Fresho brings you the flavour and richness of the finest bright orange, crispy and juicy carrots.",
-            "tags":[
-               
-            ],
             "meta_title":null,
             "meta_description":null,
             "slug":"fresho-carrot-500-g",
@@ -361,22 +287,11 @@
             },
             "type":"standard",
             "stock_tracking":false,
-            "options":[
-               
-            ],
             "currency":"INR",
             "delivery":"shipment",
             "tax_class":"standard",
             "date_created":"2021-05-30T03:18:25.727Z",
             "stock_status":null,
-            "category_index":{
-               "sort":{
-                  "60b1fb304a48b82c2efbad1d":0
-               },
-               "id":[
-                  "60b1fb304a48b82c2efbad1d"
-               ]
-            },
             "date_updated":"2021-05-30T03:42:03.033Z",
             "id":"5"
         },
@@ -420,14 +335,8 @@
             "sale":false,
             "price":35,
             "sale_price":22,
-            "prices":[
-               
-            ],
             "variable":false,
             "description":"Fresho Potatoes are nutrient-dense, non-fattening and have reasonable amount of calories. Include them in your regular meals so that the body receives a good supply of carbohydrates, dietary fibers and essential minerals such as copper, magnesium, and iron. In India, potatoes are probably the second-most consumed vegetables after onions.<br>",
-            "tags":[
-               
-            ],
             "meta_title":null,
             "meta_description":null,
             "slug":"fresho-potato-1-kg",
@@ -437,22 +346,11 @@
             },
             "type":"standard",
             "stock_tracking":false,
-            "options":[
-               
-            ],
             "currency":"INR",
             "delivery":"shipment",
             "tax_class":"standard",
             "date_created":"2021-05-30T03:15:18.439Z",
             "stock_status":null,
-            "category_index":{
-               "sort":{
-                  "60b1fb304a48b82c2efbad1d":0
-               },
-               "id":[
-                  "60b1fb304a48b82c2efbad1d"
-               ]
-            },
             "date_updated":"2021-05-30T03:42:03.046Z",
             "id":"6"
         },
@@ -496,14 +394,8 @@
             "sale":false,
             "price":45,
             "sale_price":32,
-            "prices":[
-               
-            ],
             "variable":false,
             "description":"With a segmented flesh that has a unique pleasant aroma and a strong sour taste, lemons are round/oval and have a yellow, texturized external peel.<br>",
-            "tags":[
-               
-            ],
             "meta_title":null,
             "meta_description":null,
             "slug":"fresho-lemon-250-g",
@@ -513,22 +405,11 @@
             },
             "type":"standard",
             "stock_tracking":false,
-            "options":[
-               
-            ],
             "currency":"INR",
             "delivery":"shipment",
             "tax_class":"standard",
             "date_created":"2021-05-30T03:12:04.941Z",
             "stock_status":null,
-            "category_index":{
-               "sort":{
-                  "60b1fb304a48b82c2efbad1d":0
-               },
-               "id":[
-                  "60b1fb304a48b82c2efbad1d"
-               ]
-            },
             "date_updated":"2021-05-30T03:42:03.029Z",
             "id":"7"
         },
@@ -572,14 +453,8 @@
             "sale":false,
             "price":62,
             "sale_price":55,
-            "prices":[
-               
-            ],
             "variable":false,
             "description":"With greenish black to smooth dark green surface, we selectively pick organically grown watermelons from the best farms<br>These watermelons have juicy, sweet and grainy textured flesh filled with 12-14% of sugar content, making it a healthy alternative to sugary carbonated drinks. Flesh colour of these are pink to red with dark brown/black seeds.<br>",
-            "tags":[
-               
-            ],
             "meta_title":null,
             "meta_description":null,
             "slug":"fresho-watermelon-1-pc",
@@ -589,22 +464,11 @@
             },
             "type":"standard",
             "stock_tracking":false,
-            "options":[
-               
-            ],
             "currency":"INR",
             "delivery":"shipment",
             "tax_class":"standard",
             "date_created":"2021-05-30T03:08:10.386Z",
             "stock_status":null,
-            "category_index":{
-               "sort":{
-                  "60b1fb304a48b82c2efbad1d":0
-               },
-               "id":[
-                  "60b1fb304a48b82c2efbad1d"
-               ]
-            },
             "date_updated":"2021-05-30T03:42:03.036Z",
             "id":"8"
         },
@@ -648,14 +512,8 @@
             "sale":false,
             "price":35,
             "sale_price":23,
-            "prices":[
-               
-            ],
             "variable":false,
             "description":"Drumsticks have long, dark green bumpy pods running along the length and fleshy pulp inside the pod encasing each seed.<br>These pods have a faint bitter taste combined with slight sweetness.",
-            "tags":[
-               
-            ],
             "meta_title":null,
             "meta_description":null,
             "slug":"fresho-drumstick-250-g",
@@ -665,22 +523,11 @@
             },
             "type":"standard",
             "stock_tracking":false,
-            "options":[
-               
-            ],
             "currency":"INR",
             "delivery":"shipment",
             "tax_class":"standard",
             "date_created":"2021-05-30T01:40:20.238Z",
             "stock_status":null,
-            "category_index":{
-               "sort":{
-                  "60b1fb304a48b82c2efbad1d":0
-               },
-               "id":[
-                  "60b1fb304a48b82c2efbad1d"
-               ]
-            },
             "date_updated":"2021-05-30T01:41:35.545Z",
             "id":"9"
         },
@@ -724,14 +571,8 @@
             "sale":false,
             "price":52,
             "sale_price":45,
-            "prices":[
-               
-            ],
             "variable":false,
             "description":"With a shape resembling that of a cauliflower, Brocollis have clusters of small, tight flower heads. These heads turn bright green on cooking and tastes slightly bitter.<br>",
-            "tags":[
-               
-            ],
             "meta_title":null,
             "meta_description":null,
             "slug":"fresho-broccoli-1-pc",
@@ -741,22 +582,11 @@
             },
             "type":"standard",
             "stock_tracking":false,
-            "options":[
-               
-            ],
             "currency":"INR",
             "delivery":"shipment",
             "tax_class":"standard",
             "date_created":"2021-05-30T01:37:36.109Z",
             "stock_status":null,
-            "category_index":{
-               "sort":{
-                  "60b1fb304a48b82c2efbad1d":0
-               },
-               "id":[
-                  "60b1fb304a48b82c2efbad1d"
-               ]
-            },
             "date_updated":"2021-05-30T01:41:35.557Z",
             "id":"10"
         },
@@ -800,14 +630,8 @@
             "sale":false,
             "price":10,
             "sale_price":7.5,
-            "prices":[
-               
-            ],
             "variable":false,
             "description":"Fresho brings to you an exquisite range of locally grown organic tomatoes, which are now available at bigbasket. These organic tomatoes are free from harmful pesticides and insecticides and thus have a very natural and tangy taste, which is attributed to its healthy soil growth. The ripe and firm tomatoes are a luscious addition to any meal.<br>",
-            "tags":[
-               
-            ],
             "meta_title":null,
             "meta_description":null,
             "slug":"fresho-tomato",
@@ -817,22 +641,11 @@
             },
             "type":"standard",
             "stock_tracking":false,
-            "options":[
-               
-            ],
             "currency":"INR",
             "delivery":"shipment",
             "tax_class":"standard",
             "date_created":"2021-05-30T01:35:01.341Z",
             "stock_status":null,
-            "category_index":{
-               "sort":{
-                  "60b1fb304a48b82c2efbad1d":0
-               },
-               "id":[
-                  "60b1fb304a48b82c2efbad1d"
-               ]
-            },
             "date_updated":"2021-05-30T01:41:35.558Z",
             "id":"11"
         },
@@ -876,14 +689,8 @@
             "sale":false,
             "price":25,
             "sale_price":23,
-            "prices":[
-               
-            ],
             "variable":false,
             "description":"Cauliflower is made up of tightly bound clusters of soft, crumbly, sweet cauliflower florets that form a dense head.<br>Resembling a classic tree, the florets are attached to a central edible white trunk which is firm and tender.",
-            "tags":[
-               
-            ],
             "meta_title":null,
             "meta_description":null,
             "slug":"fresho-cauliflower",
@@ -893,22 +700,11 @@
             },
             "type":"standard",
             "stock_tracking":false,
-            "options":[
-               
-            ],
             "currency":"INR",
             "delivery":"shipment",
             "tax_class":"standard",
             "date_created":"2021-05-30T01:32:20.234Z",
             "stock_status":null,
-            "category_index":{
-               "sort":{
-                  "60b1fb304a48b82c2efbad1d":0
-               },
-               "id":[
-                  "60b1fb304a48b82c2efbad1d"
-               ]
-            },
             "date_updated":"2021-05-30T01:41:35.564Z",
             "id":"12"
         },
@@ -952,14 +748,8 @@
             "sale":false,
             "price":35,
             "sale_price":30,
-            "prices":[
-               
-            ],
             "variable":false,
             "description":"Onion is a vegetable which is almost like a staple in Indian food. This is also known to be one of the essential ingredients of raw salads. They come in different colours like white, red or yellow and are quite in demand in cold salads and hot soups.You can dice, slice or cut it in rings and put it in burgers and sandwiches. Onions emit a sharp flavour and fragrance once they are fried; it is due to the sulphur compound in the vegetable.Onions are known to be rich in biotin.",
-            "tags":[
-               
-            ],
             "meta_title":null,
             "meta_description":null,
             "slug":"fresho-onion",
@@ -969,22 +759,11 @@
             },
             "type":"standard",
             "stock_tracking":false,
-            "options":[
-               
-            ],
             "currency":"INR",
             "delivery":"shipment",
             "tax_class":"standard",
             "date_created":"2021-05-30T01:29:34.459Z",
             "stock_status":null,
-            "category_index":{
-               "sort":{
-                  "60b1fb304a48b82c2efbad1d":0
-               },
-               "id":[
-                  "60b1fb304a48b82c2efbad1d"
-               ]
-            },
             "date_updated":"2021-05-30T01:41:35.530Z",
             "id":"13"
         },
@@ -1028,14 +807,8 @@
             "sale":false,
             "price":75,
             "sale_price":65,
-            "prices":[
-               
-            ],
             "variable":false,
             "description":"<ul><li>Popularly grown in the Mysore region of Karnataka, Raspuri mangoes have a juicy flesh with rich sweet taste and an excellent flavour.</li><li>We source the best Raspuri mangoes directly from the farmers of Mysore, Karnataka.</li><li>Never miss the mangoes during the season.</li></ul>",
-            "tags":[
-               
-            ],
             "meta_title":null,
             "meta_description":null,
             "slug":"fresho-raspuri-mango",
@@ -1045,22 +818,11 @@
             },
             "type":"standard",
             "stock_tracking":false,
-            "options":[
-               
-            ],
             "currency":"INR",
             "delivery":"shipment",
             "tax_class":"standard",
             "date_created":"2021-05-30T01:27:17.309Z",
             "stock_status":null,
-            "category_index":{
-               "sort":{
-                  "60b1fb304a48b82c2efbad1d":0
-               },
-               "id":[
-                  "60b1fb304a48b82c2efbad1d"
-               ]
-            },
             "date_updated":"2021-05-30T01:41:35.549Z",
             "id":"14"
         },
@@ -1104,14 +866,8 @@
             "sale":false,
             "price":160,
             "sale_price":129,
-            "prices":[
-               
-            ],
             "variable":false,
             "description":"Fresho Organic products are organically grown and handpicked by expert.<br>Product image shown is for representation purpose only, the actually product may vary based on season, produce &amp; availability.<br>",
-            "tags":[
-               
-            ],
             "meta_title":null,
             "meta_description":null,
             "slug":"fresho-pomegranate",
@@ -1120,22 +876,11 @@
             },
             "type":"standard",
             "stock_tracking":false,
-            "options":[
-               
-            ],
             "currency":"INR",
             "delivery":"shipment",
             "tax_class":"standard",
             "date_created":"2021-05-30T01:12:49.131Z",
             "stock_status":null,
-            "category_index":{
-               "sort":{
-                  "60b1fb304a48b82c2efbad1d":0
-               },
-               "id":[
-                  "60b1fb304a48b82c2efbad1d"
-               ]
-            },
             "date_updated":"2021-05-30T01:41:35.561Z",
             "id":"15"
         },
@@ -1461,14 +1206,8 @@
             "sale":false,
             "price":99,
             "sale_price":90,
-            "prices":[
-               
-            ],
             "variable":false,
             "description":"Presenting the international favourite, Pringles, now in India. This international range brings to you the amazing Original flavour of Pringles. Unlike other Potato chips, Pringles iconic crisp is made from a mix of Potato, Rice flour, Corn Flour and Wheat starch. It is light and crispy, never greasy and a comes in a can that is just not a can. Experience the Pringles Magic today. Satisfy your snack craving with the irresistible taste of Original flavour potato crisps; uniquely shaped and seasoned from edge to edge for a perfectly flavoured bite every time. Make snack time more fun with the original, stackable potato crisp; pop open a can and experience the classic flavour and satisfying crunch.<br>",
-            "tags":[
-               
-            ],
             "meta_title":null,
             "meta_description":null,
             "slug":"pringles",
@@ -1477,22 +1216,11 @@
             },
             "type":"standard",
             "stock_tracking":false,
-            "options":[
-               
-            ],
             "currency":"INR",
             "delivery":"shipment",
             "tax_class":"standard",
             "date_created":"2021-05-30T05:29:23.619Z",
             "stock_status":null,
-            "category_index":{
-               "sort":{
-                  "60b31e3df6496750bbaa6054":0
-               },
-               "id":[
-                  "60b31e3df6496750bbaa6054"
-               ]
-            },
             "date_updated":"2021-05-30T05:30:04.657Z",
             "id":"1"
          },
@@ -1536,14 +1264,8 @@
             "sale":false,
             "price":10,
             "sale_price":10,
-            "prices":[
-               
-            ],
             "variable":false,
             "description":"Relish the delectable combination of sour and cream perfectly blended with herb and onion flavour. Delicious individual bags: perfect for snacking at work, home or school. Combining two great flavours, this one is absolutely delicious! Call your friends over or get ready to watch a movie no matter what you do, make sure you have this yummy snack close by.<br>",
-            "tags":[
-               
-            ],
             "meta_title":null,
             "meta_description":null,
             "slug":"lays-potato-chips",
@@ -1552,22 +1274,11 @@
             },
             "type":"standard",
             "stock_tracking":false,
-            "options":[
-               
-            ],
             "currency":"INR",
             "delivery":"shipment",
             "tax_class":"standard",
             "date_created":"2021-05-30T05:27:29.103Z",
             "stock_status":null,
-            "category_index":{
-               "sort":{
-                  "60b31e3df6496750bbaa6054":0
-               },
-               "id":[
-                  "60b31e3df6496750bbaa6054"
-               ]
-            },
             "date_updated":"2021-05-30T05:30:04.663Z",
             "id":"2"
          },
@@ -1611,14 +1322,8 @@
             "sale":false,
             "price":120,
             "sale_price":108,
-            "prices":[
-               
-            ],
             "variable":false,
             "description":"McCain Chilli Garlic Potato Bites are the finest satisfying stuffs to delight you with the peppery blend of Chilli, Potatoes and Garlic. The wholesome and yummy bites will raise your tang buds. They are the light, golden bites that add nutrition and flavour to the family meals time after time. Indulge yourself within the fresh and genuine flavour of potato bites engrossing with spicy, syrupy and bitter ingredients.<br>",
-            "tags":[
-               
-            ],
             "meta_title":null,
             "meta_description":null,
             "slug":"mc-cain-potato-bites",
@@ -1627,22 +1332,11 @@
             },
             "type":"standard",
             "stock_tracking":false,
-            "options":[
-               
-            ],
             "currency":"INR",
             "delivery":"shipment",
             "tax_class":"standard",
             "date_created":"2021-05-30T05:26:01.896Z",
             "stock_status":null,
-            "category_index":{
-               "sort":{
-                  "60b31e3df6496750bbaa6054":0
-               },
-               "id":[
-                  "60b31e3df6496750bbaa6054"
-               ]
-            },
             "date_updated":"2021-05-30T05:30:04.672Z",
             "id":"3"
          },
@@ -1686,14 +1380,8 @@
             "sale":false,
             "price":10,
             "sale_price":10,
-            "prices":[
-               
-            ],
             "variable":false,
             "description":"Doritos is the spark that ignites you to be bold. Tooth rattling crunch and intense flavours that ignite you to seize the moment and release your inner boldness. If you&rsquo;re up to the challenge, grab a bag of DORITOS&reg; Nacho Cheese tortilla chips and get ready for the experience. It&rsquo;s has a bold experience in snacking and beyond.<br>",
-            "tags":[
-               
-            ],
             "meta_title":null,
             "meta_description":null,
             "slug":"doritos-nachos-cheese",
@@ -1702,22 +1390,11 @@
             },
             "type":"standard",
             "stock_tracking":false,
-            "options":[
-               
-            ],
             "currency":"INR",
             "delivery":"shipment",
             "tax_class":"standard",
             "date_created":"2021-05-30T05:24:27.632Z",
             "stock_status":null,
-            "category_index":{
-               "sort":{
-                  "60b31e3df6496750bbaa6054":0
-               },
-               "id":[
-                  "60b31e3df6496750bbaa6054"
-               ]
-            },
             "date_updated":"2021-05-30T05:30:04.675Z",
             "id":"4"
          },
@@ -1761,14 +1438,8 @@
             "sale":false,
             "price":120,
             "sale_price":120,
-            "prices":[
-               
-            ],
             "variable":false,
             "description":"Enjoy the mouthwatering flavours of MTR Foods Gulab Jamuns anytime, anywhere. These traditional Indian sweets are suited to every occasion and every celebration. In true MTR Foods tradition, you can serve it with minimum inconvenience and maximum delight!<br>",
-            "tags":[
-               
-            ],
             "meta_title":null,
             "meta_description":null,
             "slug":"mtr-gulab-jamun",
@@ -1777,22 +1448,11 @@
             },
             "type":"standard",
             "stock_tracking":false,
-            "options":[
-               
-            ],
             "currency":"INR",
             "delivery":"shipment",
             "tax_class":"standard",
             "date_created":"2021-05-30T05:22:57.726Z",
             "stock_status":null,
-            "category_index":{
-               "sort":{
-                  "60b31e3df6496750bbaa6054":0
-               },
-               "id":[
-                  "60b31e3df6496750bbaa6054"
-               ]
-            },
             "date_updated":"2021-05-30T05:30:04.699Z",
             "id":"5"
          },
@@ -1836,14 +1496,8 @@
             "sale":false,
             "price":65,
             "sale_price":60,
-            "prices":[
-               
-            ],
             "variable":false,
             "description":"Every summer afternoon, when Maa would sleep tired after half a day&rsquo;s zillion duties, we would surreptitiously tiptoe into the kitchen for a little after-lunch snack. The cool tile flooring masking the sound of us acting like plundering bandits in our own home, looking for the infamous steel dabba. We&rsquo;ll never forget this one particular afternoon when Maa caught us stealing Aam Papad red-handed. Since this wasn&rsquo;t the first time, we were expecting things to get ugly but instead, she too sat with us on the floor and demanded her share. We were all complicit here! As we ate that tangy, sweet treat we saw a fun, rule breaker side to our mother that&rsquo;s forever etched in our hearts. Guess Aam Papad brings out the child in everyone!<br>",
-            "tags":[
-               
-            ],
             "meta_title":null,
             "meta_description":null,
             "slug":"paper-boat-aam-papad",
@@ -1852,22 +1506,11 @@
             },
             "type":"standard",
             "stock_tracking":false,
-            "options":[
-               
-            ],
             "currency":"INR",
             "delivery":"shipment",
             "tax_class":"standard",
             "date_created":"2021-05-30T05:20:59.808Z",
             "stock_status":null,
-            "category_index":{
-               "sort":{
-                  "60b31e3df6496750bbaa6054":0
-               },
-               "id":[
-                  "60b31e3df6496750bbaa6054"
-               ]
-            },
             "date_updated":"2021-05-30T05:30:04.706Z",
             "id":"6"
          },
@@ -1911,14 +1554,8 @@
             "sale":false,
             "price":140,
             "sale_price":120,
-            "prices":[
-               
-            ],
             "variable":false,
             "description":"For over 100 years, the iconic Hersheys Kisses chocolates have been spreading happiness across the world. Kisses chocolate is made with creamy delicious milk chocolate &amp; almond and is delicately wrapped to make your loved ones feel special. The bite-sized pieces of chocolate have a distinctive shape of flat-bottomed teardrops. Show that you care and say it with a kiss. Hersheys Kisses are available in the following flavours - milk chocolate, cookies &amp; creme, almond.<br>",
-            "tags":[
-               
-            ],
             "meta_title":null,
             "meta_description":null,
             "slug":"hersheys-kisses-milk-chocolate",
@@ -1928,23 +1565,12 @@
             "undefined":null,
             "type":"standard",
             "stock_tracking":false,
-            "options":[
-               
-            ],
             "currency":"INR",
             "delivery":"shipment",
             "tax_class":"standard",
             "date_created":"2021-05-30T05:18:19.789Z",
             "stock_status":null,
             "date_updated":"2021-05-30T05:30:04.685Z",
-            "category_index":{
-               "sort":{
-                  "60b31e3df6496750bbaa6054":0
-               },
-               "id":[
-                  "60b31e3df6496750bbaa6054"
-               ]
-            },
             "id":"7"
          },
          {
@@ -1987,14 +1613,8 @@
             "sale":false,
             "price":125,
             "sale_price":115,
-            "prices":[
-               
-            ],
             "variable":false,
             "description":"It is rich, it is smooth, It is delicious and most importantly, it is sugar-free. Amul Sugar Free Dark Chocolate is the perfect way to surrender to a truly mesmerizing experience sans calories.<br>",
-            "tags":[
-               
-            ],
             "meta_title":null,
             "meta_description":null,
             "slug":"amul-sugar-free-dark-chocolate",
@@ -2003,22 +1623,11 @@
             },
             "type":"standard",
             "stock_tracking":false,
-            "options":[
-               
-            ],
             "currency":"INR",
             "delivery":"shipment",
             "tax_class":"standard",
             "date_created":"2021-05-30T05:16:59.127Z",
             "stock_status":null,
-            "category_index":{
-               "sort":{
-                  "60b31e3df6496750bbaa6054":0
-               },
-               "id":[
-                  "60b31e3df6496750bbaa6054"
-               ]
-            },
             "date_updated":"2021-05-30T05:30:04.668Z",
             "id":"8"
          },
@@ -2062,14 +1671,8 @@
             "sale":false,
             "price":100,
             "sale_price":80,
-            "prices":[
-               
-            ],
             "variable":false,
             "description":"Share your favourite treats with your favourite people. This Share bag contains 7 individually wrapped KitKat 2 Finger packs. Just unwrap your KitKat, break off one of the fingers, snap into two and savour the delicious crispy treat. Have A Break, Have A Kitkat.<br>",
-            "tags":[
-               
-            ],
             "meta_title":null,
             "meta_description":null,
             "slug":"nestle-kitkat-fingers-share-bag",
@@ -2078,22 +1681,11 @@
             },
             "type":"standard",
             "stock_tracking":false,
-            "options":[
-               
-            ],
             "currency":"INR",
             "delivery":"shipment",
             "tax_class":"standard",
             "date_created":"2021-05-30T05:15:01.306Z",
             "stock_status":null,
-            "category_index":{
-               "sort":{
-                  "60b31e3df6496750bbaa6054":0
-               },
-               "id":[
-                  "60b31e3df6496750bbaa6054"
-               ]
-            },
             "date_updated":"2021-05-30T05:30:04.686Z",
             "id":"9"
          }
