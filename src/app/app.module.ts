@@ -11,6 +11,7 @@ import { SnacksComponent } from './snacks/snacks.component';
 import { ProductCardComponent } from './product-card/product-card.component';
 import { CartComponent } from './cart/cart.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     SnacksComponent,
     ProductCardComponent,
     CartComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    PagenotfoundComponent
   ],
   imports: [
     BrowserModule,
