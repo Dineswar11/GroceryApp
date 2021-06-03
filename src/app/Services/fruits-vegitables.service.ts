@@ -15,5 +15,8 @@ export class FruitsVegitablesService {
     return this.hc.get<fruitsvegitablesArr[]>('http://localhost:3000/fruits_vegitables')
   }
   
+  getSpecificFruitsAndVegitablesData(id):Observable<fruitsvegitablesArr>{
+    return this.hc.get<fruitsvegitablesArr>('http://localhost:3000/fruits_vegitables/'+id)
+  }
 
 }

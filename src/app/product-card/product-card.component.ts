@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { opacity, popup } from '../animation';
 
 @Component({
@@ -15,15 +16,27 @@ export class ProductCardComponent implements OnInit {
 
   discount:number;
 
-  constructor() { }
+  constructor(private Router:Router) { }
 
   ngOnInit(): void {
   
     this.discount=((this.productData.price-this.productData.sale_price)*100)/this.productData.price;
-  
   }
 
   //recieving data from parent
   @Input() productData:any;
+
+
+    onSelectSnacks(id){
+      if(this.Router.url === '/snacks'){
+        this.Router.navigateByUrl('snacks/'+id)
+      }
+      if(this.Router.url === '/fruits-vegitables'){
+        this.Router.navigateByUrl('fruits-vegitables/'+id)
+      }
+    }
+  
+    onSelectFruitsVegetables(id){
+    }
 
 }
