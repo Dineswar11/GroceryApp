@@ -11,6 +11,12 @@
 /******
 2.Button
 ******/
+.click{
+    border: 0px solid transparent;
+    margin: 0px;
+    padding: 0px;
+}
+
 .add-to-cart{
     width: 90%;
     position: absolute;
