@@ -3,7 +3,7 @@ import { animate, keyframes, style, transition, trigger } from '@angular/animati
 export let opacity = trigger('opacity', [
     transition(':enter', [
         style({ opacity: 0 }),
-        animate(750)
+        animate(1000)
     ])
 ])
 
