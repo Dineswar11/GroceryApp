@@ -1,0 +1,105 @@
+/*******
+1.TypeWriter
+*******/
+.typewriter {
+    height: 500px;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../../assets/Images/Fruits&vegitables-bg-main.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    color: rgb(255, 106, 106);
+}
+
+h4{
+    margin: 0px;
+    padding: 0px;
+}
+
+/*******
+2.Features
+*******/
+.img-1{
+    background-color: lightgreen;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: visible;
+}
+
+.img-1:hover{
+    transform: scale(1.5);
+    transition: transform 500ms ease-in;
+}
+
+.shake:hover{
+    animation: wobble-hor-bottom 2500ms;
+}
+
+@keyframes wobble-hor-bottom {
+    0%,
+    100% {
+              transform: translateX(0%);
+              transform-origin: 50% 50%;
+    }
+    15% {
+              transform: translateX(-30px) rotate(-6deg);
+    }
+    30% {
+              transform: translateX(15px) rotate(6deg);
+    }
+    45% {
+              transform: translateX(-15px) rotate(-3.6deg);
+    }
+    60% {
+              transform: translateX(9px) rotate(2.4deg);
+    }
+    75% {
+              transform: translateX(-6px) rotate(-1.2deg);
+    }
+}
+
+/**********
+3.Shop Now!!
+**********/
+.snacks,.fruits{
+    height: 250px;
+    background-repeat: no-repeat;
+    background-size: 100% 250px;
+    position: relative;
+}
+
+.snacks{
+    background-image: linear-gradient(rgb(255, 255, 255,0.9),rgb(255, 255, 255,0.7)),url(../../assets/Images/Snacks-1.jpg);
+}
+
+.fruits{
+    background-image: linear-gradient(rgb(255, 255, 255,0.8),rgb(255, 255, 255,0.6)),url(../../assets/Images/fruits-1.jpg);
+}
+
+.snacks-txt,.fruits-txt{
+    position: absolute;
+    top: 40%;
+}
+
+.snacks:hover,.fruits:hover{
+    transform: scale(1.1);
+    transition: transform 1000ms;
+}
+
+.snacks:hover .snacks-txt{
+    top: 25%;
+    transition: top 1000ms;
+}
+
+.fruits:hover .fruits-txt{
+    top: 25%;;
+    transition: top 1000ms;
+}
