@@ -13,4 +13,7 @@ export class SnacksService {
   getSnackData():Observable<snacksArr[]>{
     return this.HttpClient.get<snacksArr[]>('http://localhost:3000/snacks');
   }
+  getSnacksById(id):Observable<snacksArr>{
+    return this.HttpClient.get<snacksArr>('http://localhost:3000/snacks/'+id)
+  }
 }

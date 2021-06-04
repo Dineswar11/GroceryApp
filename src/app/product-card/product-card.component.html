@@ -1,4 +1,6 @@
-<div class="card" (mouseenter)='displayButton=true' (mouseleave)='displayButton=false' >
+
+  <button (click)="onSelectId(productData.id)">{{productData.id}}
+    <div class="card" (mouseenter)='displayButton=true' (mouseleave)='displayButton=false' >
     <img *ngIf='displayImage2' @opacity (mouseleave)='displayImage2=false' class="image-1"
         src={{productData.images[1].file.url}} width="100%" height="300px" alt="">
     <img *ngIf='!displayImage2' @opacity (mouseenter)='displayImage2=true' class="image-2"
@@ -11,3 +13,4 @@
         <span class="text-danger"> {{productData.sale_price | currency:'INR'}} </span>
     </div>
 </div>
+</button>

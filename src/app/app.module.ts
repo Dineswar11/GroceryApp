@@ -23,7 +23,6 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
     SnacksComponent,
     ProductCardComponent,
     CartComponent,
-    ProductDetailsComponent,
     PagenotfoundComponent,
     
   ],
