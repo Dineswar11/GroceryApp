@@ -202,19 +202,29 @@
 <div class="container">
     <div class="email-newsletter mt-5 mb-5">
         <div class="row">
-            <div class="col-6">
-
+            <div class="col-6 d-flex flex-column justify-content-center mt-5 ms-4">
+                <h1 class="text-light h-100">Get all the Updates!</h1>
+                <ul class="list-unstyled text-light">
+                    <li>Sales</li>
+                    <li>Shipping</li>
+                    <li>& More</li>
+                </ul>
             </div>
             <div class="col-6">
                 <div class="card">
                     <div class="card-body">
                         <h2>Subscribe to our Newsletter</h2>
-                        <form class="mt-5">
+                        <form class="mt-5" #ref="ngForm" (ngSubmit)="addNewLetterSubscription()">
                             <div class="input-group mb-3">
-                                <input type="text" class="form-control" placeholder="Email Address">
-                                <button class="input-group-text btn-danger" type="submit" id="submit"><i class="fas fa-angle-right"></i></button>
+                                <input type="text" class="form-control" name="email" placeholder="Email Address"
+                                    #refEmail='ngModel' pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$"
+                                    [(ngModel)]='users.email'>
+                                <button class="input-group-text btn-danger" type="submit" id="submit"><i
+                                        class="fas fa-angle-right"></i></button>
                             </div>
                         </form>
+                        <div class="text-warning" *ngIf="(ref.submitted||refEmail.dirty) && refEmail.errors?.pattern">
+                            This does not look like an Email :(</div>
                     </div>
                 </div>
             </div>

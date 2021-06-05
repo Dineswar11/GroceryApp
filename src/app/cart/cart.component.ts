@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { opacity } from '../animation';
+import { AddtocartService } from '../Services/addtocart.service';
 
 
 @Component({
@@ -11,12 +12,15 @@ import { opacity } from '../animation';
 })
 export class CartComponent implements OnInit {
 
-  
+  productsAddedToCart:any;
 
-  constructor() { }
+  constructor(private CartDS:AddtocartService) { }
   ngOnInit(): void {
-    
+    this.productsAddedToCart = (this.CartDS.getTheProductsInCart())
+    console.log(this.productsAddedToCart)
   }
+
+
 
   quantity:number = 1;
   saleprice:number= 50;

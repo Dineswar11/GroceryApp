@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { AddtocartService } from '../Services/addtocart.service';
 import { FruitsVegitablesService } from '../Services/fruits-vegitables.service';
 import { SnacksService } from '../Services/snacks.service';
 
@@ -15,7 +16,7 @@ export class ProductDetailsComponent implements OnInit {
   category:string;
 
   constructor(private ActivatedRoute: ActivatedRoute,private Router:Router, private SnacksDataService: SnacksService,
-              private Fruits_Vegetables: FruitsVegitablesService) { }
+              private Fruits_Vegetables: FruitsVegitablesService,private CartDS:AddtocartService) { }
 
   ngOnInit(): void {
 
@@ -43,6 +44,10 @@ export class ProductDetailsComponent implements OnInit {
       )
     }
     
+  }
+
+  addToCart(){
+    this.CartDS.newProductAddedToCart(this.productData)
   }
 
 }

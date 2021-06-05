@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { userClass } from '../Models/user.model';
+import { NewslettersubscriptionService } from '../Services/newslettersubscription.service';
 
 @Component({
   selector: 'app-footer',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  constructor(private newsletterSub:NewslettersubscriptionService) { }
+
+  users=new userClass('');
 
   ngOnInit(): void {
   }
 
+  addNewLetterSubscription(){
+    this.newsletterSub.addNewsLetterSubscription(this.users).subscribe(
+      res=>{
+      },
+      err=>{
+        console.log('err in adding email subscription',err)
+      }
+    )
+  }
 }

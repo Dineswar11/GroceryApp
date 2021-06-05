@@ -1,5 +1,7 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import Typewriter from 't-writer.js'
+import { userClass } from '../Models/user.model';
+import { NewslettersubscriptionService } from '../Services/newslettersubscription.service';
 
 @Component({
   selector: 'app-home',
@@ -8,10 +10,12 @@ import Typewriter from 't-writer.js'
 })
 export class HomeComponent implements OnInit , AfterViewInit{
 
+  users=new userClass('');
+
   @ViewChild('tw1') typewriterElement1: ElementRef;
   @ViewChild('tw3') typewriterElement3: ElementRef;
 
-  constructor() { }
+  constructor(private newsletterSub:NewslettersubscriptionService) { }
 
   ngOnInit(): void {
   }
@@ -36,15 +40,25 @@ export class HomeComponent implements OnInit , AfterViewInit{
     writer3
       .removeCursor()
       .type("Fruits")
-      .rest(500)
+      .rest(1500)
       .clear()
       .type("Vegetables")
-      .rest(500)
+      .rest(1500)
       .clear()
       .type("Snacks")
-      .rest(500)
+      .rest(1500)
       .clear()
       .then(writer3.start.bind(writer1))
+  }
+
+  addNewLetterSubscription(){
+    this.newsletterSub.addNewsLetterSubscription(this.users).subscribe(
+      res=>{
+      },
+      err=>{
+        console.log('err in adding email subscription',err)
+      }
+    )
   }
 
 }

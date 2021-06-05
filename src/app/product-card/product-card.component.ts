@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { opacity, popup } from '../animation';
+import { AddtocartService } from '../Services/addtocart.service';
 
 @Component({
   selector: 'app-product-card',
@@ -16,7 +17,7 @@ export class ProductCardComponent implements OnInit {
 
   discount:number;
 
-  constructor(private Router:Router) { }
+  constructor(private Router:Router,private addToCartDS:AddtocartService) { }
 
   ngOnInit(): void {
   
@@ -27,7 +28,7 @@ export class ProductCardComponent implements OnInit {
   @Input() productData:any;
 
 
-    onSelectSnacks(id){
+    onSelectProduct(id){
       if(this.Router.url === '/snacks'){
         this.Router.navigateByUrl('snacks/'+id)
       }
@@ -35,8 +36,9 @@ export class ProductCardComponent implements OnInit {
         this.Router.navigateByUrl('fruits-vegitables/'+id)
       }
     }
-  
-    onSelectFruitsVegetables(id){
+
+    addToCart(){
+      this.addToCartDS.newProductAddedToCart(this.productData)
     }
 
 }
