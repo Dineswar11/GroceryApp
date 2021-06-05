@@ -34,6 +34,7 @@ export class HomeComponent implements OnInit , AfterViewInit{
     .start()
 
     writer3
+      .removeCursor()
       .type("Fruits")
       .rest(500)
       .clear()
