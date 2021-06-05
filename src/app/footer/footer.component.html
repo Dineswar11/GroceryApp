@@ -26,12 +26,13 @@
         <div class="col d-flex justify-content-center top-footer-3 mt-3">
             <div class="text-center">
                 <p>Email Newsletter</p>
-                <form>
+                <form #ref="ngForm" (ngSubmit)="addNewLetterSubscription()">
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Email Address">
+                        <input type="text" class="form-control" name="email" #refEmail='ngModel' pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$" placeholder="Email Address" [(ngModel)]='users.email'>
                         <button class="input-group-text btn-outline-dark" type="submit" id="submit"><i class="fas fa-angle-right"></i></button>
                     </div>
                 </form>
+                <div class="text-warning" *ngIf="(ref.submitted||refEmail.dirty) && refEmail.errors?.pattern">This does not look like an Email :(</div>
             </div>
         </div>
     </div>
