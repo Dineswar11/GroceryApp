@@ -9,14 +9,15 @@
 }
 
 .add-to-cart{
+    background-color: #e66626;
     width: 90%;
     border-radius: 8%;
     margin-top: 2rem;
+    border: 0px solid transparent;
 }
 
 .add-to-cart:hover{
-    background-color: white;
-    color: black;
+    box-shadow: 5px 5px 20px black;
 }
 
 @media screen and (max-width:768px) {

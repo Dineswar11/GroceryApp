@@ -12,7 +12,7 @@
             <div style="padding-top: 15%;">
                 <div class="display-4 text-center text-danger">NO ITEMS ADDED</div>
                 <div class="text-center">
-                    <a routerLink="/snacks" ><button class="btn btn-primary mt-4">Shop Now</button></a> 
+                    <a routerLink="/snacks" ><button class="btn mt-4" style="background-color: #F29366;">Shop Now</button></a> 
                 </div>
             </div>
         </div>
@@ -37,16 +37,16 @@
               <h4>Description</h4>
                     <p> {{products?.description}} </p>
               <div class="text-right d-block mx-auto">
-                <button id="btn" class="btn btn-outline-danger" *ngIf="quantity>1" (click)="quantity=quantity-1;">
+                <button id="btn" class="btn btn-outline-danger" *ngIf="products.quantity>1" (click)="products.quantity=products.quantity-1;">
                   <i class="fas fa-minus-square"></i>
                 </button>
-                <span class="ms-2 me-2">Quantity  {{quantity}}</span>
-                <button id="btn" class="btn btn-outline-success" (click)="quantity=quantity+1">
+                <span class="ms-2 me-2">Quantity  {{products?.quantity}}</span>
+                <button id="btn" class="btn btn-outline-success" (click)="products.quantity=products.quantity+1">
                    <i class="fas fa-plus-square"></i>
                 </button> 
               </div>
               <hr>
-              <h4 id="k">Total price: {{products?.sale_price*quantity}}</h4>
+              <h4 id="k">Total price: {{products?.sale_price*products?.quantity}}</h4>
            </div>
   
              

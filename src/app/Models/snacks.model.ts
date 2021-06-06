@@ -1,6 +1,8 @@
 export interface snacksArr{
     name:string
     sku:number
+    active:boolean
+    quantity:number
     images:[
         {
             file:{
