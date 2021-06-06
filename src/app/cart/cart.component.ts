@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { opacity } from '../animation';
+import { opacity, slideright } from '../animation';
 import { AddtocartService } from '../Services/addtocart.service';
 
 
@@ -8,7 +8,7 @@ import { AddtocartService } from '../Services/addtocart.service';
   selector: 'app-cart',
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.css'],
-  animations:[opacity]
+  animations:[opacity,slideright]
 })
 export class CartComponent implements OnInit {
 
@@ -23,7 +23,6 @@ export class CartComponent implements OnInit {
 
 
   quantity:number = 1;
-  saleprice:number= 50;
   
 }
 

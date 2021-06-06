@@ -25,3 +25,29 @@ export let popup = trigger('popup', [
         ]))
     ])
 ])
+
+export let slideleft = trigger('slideleft',[
+    transition(':enter',[
+        animate(750,keyframes([
+            style({transform: "translateX(-300px)",
+                   opacity: 0,
+                    offset:0}),
+           style({transform: "translateX(0px)",
+                opacity: 1,
+                offset:1})         
+        ]))
+    ])
+])
+
+export let slideright = trigger('slideright',[
+    transition(':enter',[
+        animate(750,keyframes([
+            style({transform: "translateX(300px)",
+                   opacity: 0,
+                    offset:0}),
+           style({transform: "translateX(0px)",
+                opacity: 1,
+                offset:1})         
+        ]))
+    ])
+])
