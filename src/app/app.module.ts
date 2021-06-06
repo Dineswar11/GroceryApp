@@ -14,6 +14,8 @@ import { ProductCardComponent } from './product-card/product-card.component';
 import { CartComponent } from './cart/cart.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
     CartComponent,
     ProductDetailsComponent,
     PagenotfoundComponent,
+    LoginComponent,
+    RegisterComponent,
     
   ],
   imports: [
