@@ -6,9 +6,14 @@
 }
 
 .card {
-    background-color: hsl(190, 90%, 88%);
+    color: white!important;
+    background-color: rgb(40, 116, 40);
     margin-top: 20%;
     margin-bottom: 20%;
+}
+
+.login{
+    background-color: #F29366;
 }
 
 a {

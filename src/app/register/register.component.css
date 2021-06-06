@@ -6,10 +6,15 @@
 }
 
 .card {
+    color: white;
     padding: 1rem;
-    background-color: hsl(190, 90%, 88%);
+    background-color: rgb(40, 116, 40);
     margin-top: 15%;
     margin-bottom: 15%;
+}
+
+.register{
+    background-color: #F29366;
 }
 
 .text-color{

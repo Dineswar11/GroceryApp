@@ -4,6 +4,7 @@
       "name": "Fresho Mushrooms  1 pack",
       "sku": null,
       "active": true,
+      "quantity":1,
       "images": [
         {
           "file": {
@@ -63,6 +64,7 @@
       "name": "Fresho Beetroot, 500 g",
       "sku": null,
       "active": true,
+      "quantity":1,
       "images": [
         {
           "file": {
@@ -122,6 +124,7 @@
       "name": "Fresho Capsicum 500 g",
       "sku": null,
       "active": true,
+      "quantity":1,
       "images": [
         {
           "file": {
@@ -181,6 +184,7 @@
       "name": "Fresho Brinjal  500 g",
       "sku": null,
       "active": true,
+      "quantity":1,
       "images": [
         {
           "file": {
@@ -240,6 +244,7 @@
       "name": "Fresho Carrot  500 g",
       "sku": null,
       "active": true,
+      "quantity":1,
       "images": [
         {
           "file": {
@@ -299,6 +304,7 @@
       "name": "Fresho Potato, 1 kg",
       "sku": null,
       "active": true,
+      "quantity":1,
       "images": [
         {
           "file": {
@@ -358,6 +364,7 @@
       "name": "Fresho Lemon, 250 g",
       "sku": null,
       "active": true,
+      "quantity":1,
       "images": [
         {
           "file": {
@@ -417,6 +424,7 @@
       "name": "Fresho Watermelon 1 pc",
       "sku": null,
       "active": true,
+      "quantity":1,
       "images": [
         {
           "file": {
@@ -476,6 +484,7 @@
       "name": "Fresho Drumstick 250 g",
       "sku": null,
       "active": true,
+      "quantity":1,
       "images": [
         {
           "file": {
@@ -535,6 +544,7 @@
       "name": "Fresho Broccoli, 1 pc",
       "sku": null,
       "active": true,
+      "quantity":1,
       "images": [
         {
           "file": {
@@ -594,6 +604,7 @@
       "name": "Fresho Tomato",
       "sku": null,
       "active": true,
+      "quantity":1,
       "images": [
         {
           "file": {
@@ -653,6 +664,7 @@
       "name": "Fresho Cauliflower",
       "sku": null,
       "active": true,
+      "quantity":1,
       "images": [
         {
           "file": {
@@ -712,6 +724,7 @@
       "name": "Fresho Onion",
       "sku": null,
       "active": true,
+      "quantity":1,
       "images": [
         {
           "file": {
@@ -771,6 +784,7 @@
       "name": "Fresho Raspuri Mango",
       "sku": null,
       "active": true,
+      "quantity":1,
       "images": [
         {
           "file": {
@@ -830,6 +844,7 @@
       "name": "Fresho Pomegranate",
       "sku": null,
       "active": true,
+      "quantity":1,
       "images": [
         {
           "file": {
@@ -888,6 +903,7 @@
       "name": "Fresho Grapes - Sonaka Seedless",
       "sku": null,
       "active": true,
+      "quantity":1,
       "images": [
         {
           "file": {
@@ -958,6 +974,7 @@
       "name": "Fresho Orange",
       "sku": null,
       "active": true,
+      "quantity":1,
       "images": [
         {
           "file": {
@@ -1028,6 +1045,7 @@
       "name": "Fresho Pear - Green",
       "sku": null,
       "active": true,
+      "quantity":1,
       "images": [
         {
           "file": {
@@ -1098,6 +1116,7 @@
       "name": "Fresho Blueberry, 125 g",
       "sku": null,
       "active": true,
+      "quantity":1,
       "images": [
         {
           "file": {
@@ -1170,6 +1189,7 @@
       "name": "Pringles",
       "sku": null,
       "active": true,
+      "quantity":1,
       "images": [
         {
           "file": {
@@ -1228,6 +1248,7 @@
       "name": "Lays Potato Chips",
       "sku": null,
       "active": true,
+      "quantity":1,
       "images": [
         {
           "file": {
@@ -1286,6 +1307,7 @@
       "name": "McCain Potato Bites",
       "sku": null,
       "active": true,
+      "quantity":1,
       "images": [
         {
           "file": {
@@ -1344,6 +1366,7 @@
       "name": "Doritos Nachos Cheese",
       "sku": null,
       "active": true,
+      "quantity":1,
       "images": [
         {
           "file": {
@@ -1402,6 +1425,7 @@
       "name": "MTR Gulab Jamun",
       "sku": null,
       "active": true,
+      "quantity":1,
       "images": [
         {
           "file": {
@@ -1460,6 +1484,7 @@
       "name": "Paper Boat Aam Papad",
       "sku": null,
       "active": true,
+      "quantity":1,
       "images": [
         {
           "file": {
@@ -1518,6 +1543,7 @@
       "name": "Hersheys Kisses - Milk Chocolate,",
       "sku": null,
       "active": true,
+      "quantity":1,
       "images": [
         {
           "file": {
@@ -1577,6 +1603,7 @@
       "name": "Amul Sugar Free Dark Chocolate",
       "sku": null,
       "active": true,
+      "quantity":1,
       "images": [
         {
           "file": {
@@ -1635,6 +1662,7 @@
       "name": "Nestle Kitkat Fingers Share Bag",
       "sku": null,
       "active": true,
+      "quantity":1,
       "images": [
         {
           "file": {

@@ -1,6 +1,8 @@
 export interface fruitsvegitablesArr{
     name:string
     sku:number
+    active:boolean
+    quantity:number
     images:[
         {
             file:{

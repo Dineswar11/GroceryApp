@@ -28,4 +28,8 @@ export class AddtocartService {
   getTheProductsInCart(){
     return this.productsAddedToCart;
   }
+
+  getNumberofProductsInCart(){
+    return this.productsAddedToCart.length
+  }
 }
