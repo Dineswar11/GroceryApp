@@ -51,3 +51,34 @@ export let slideright = trigger('slideright',[
         ]))
     ])
 ])
+
+export let hinge = trigger('hinge',
+
+      [transition(':leave',[
+      animate(2000 , keyframes([
+        style( { transform: "rotate(0)",
+                 transformOrigin: "top left",
+                 animationTimingFunction: "ease-in-out" ,
+                 offset:0 } ),
+        style( { transform: "rotate(50deg)",
+                 transformOrigin: "top left",
+                 animationTimingFunction: "ease-in-out",
+                 offset:0.2 } ),
+        style( { transform: "rotate(30deg)",
+                  transformOrigin: "top left",
+                  animationTimingFunction: "ease-in-out",
+                  offset:0.4 } ),
+        style( { transform: "rotate(50deg)",
+                 transformOrigin: "top left",
+                 animationTimingFunction: "ease-in-out",
+                 offset:0.6 } ),
+        style( { transform: "rotate(40deg) translateY(0)",
+                  opacity: 1,
+                  transformOrigin: "top left",
+                  animationTimingFunction: "ease-in-out",
+                  offset:0.8 } ),
+        style( { transform: "translateY(700px)", opacity: 0 ,
+                  offset:1} )
+      ])) 
+    ])
+  ])

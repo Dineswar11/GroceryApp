@@ -1,7 +1,7 @@
 
 <h2 class="text-center m-4">SHOPPING CART <i class="fas fa-shopping-cart"></i></h2>
 
-<div class="container bg-light shadow">
+<div class="container bg-light ">
   
   <div *ngIf="productsAddedToCart.length==0" @slideright>
     <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 mt-5 mb-5" style="background-color: rgba(255, 255, 255, 0.55); border-radius: 50px;">
@@ -20,13 +20,13 @@
   </div>  
   
   <div *ngIf="productsAddedToCart.length!==0">
-    <div *ngFor='let products of productsAddedToCart' class="card m-3 mx-auto" @slideright>
+    <div *ngFor='let products of productsAddedToCart;let ind=index' @hinge class="card m-3 mx-auto shadow" @slideright>
       <div class="card-body">
         
           <div class="row">
          
-            <div class="col-sm-6 mt-2 p-1">
-              <img src={{products?.images[0].file.url}} width="100%" alt="">
+            <div class="col-sm-6 mt-2 p-1 d-flex justify-content-center align-items-center">
+              <img src={{products?.images[0].file.url}} width="75%" alt="">
             </div>
              
             <div class="col-sm-6 mt-2 p-1">
@@ -46,6 +46,9 @@
                 </button> 
               </div>
               <hr>
+              <button class="btn btn-outline-danger float-end" (click)='deleteItem(ind)' >
+                Remove From Cart
+              </button>
               <h4 id="k">Total price: {{products?.sale_price*products?.quantity}}</h4>
            </div>
   

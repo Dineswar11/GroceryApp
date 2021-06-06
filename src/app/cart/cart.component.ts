@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { opacity, slideright } from '../animation';
+import { hinge, opacity, slideright } from '../animation';
 import { AddtocartService } from '../Services/addtocart.service';
 
 
@@ -8,7 +8,7 @@ import { AddtocartService } from '../Services/addtocart.service';
   selector: 'app-cart',
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.css'],
-  animations:[opacity,slideright]
+  animations:[opacity,slideright,hinge]
 })
 export class CartComponent implements OnInit {
 
@@ -20,9 +20,9 @@ export class CartComponent implements OnInit {
     console.log(this.productsAddedToCart)
   }
 
-
-
-  quantity:number = 1;
+  deleteItem(ind){
+    this.CartDS.deleteProductFromCart(ind);
+  }
   
 }
 

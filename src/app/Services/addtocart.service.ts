@@ -15,6 +15,10 @@ export class AddtocartService {
     this.productsAddedToCart.push(newProduct)    
   }
 
+  deleteProductFromCart(index){
+    this.productsAddedToCart.splice(index,1)
+  }
+
   //check(newProduct):boolean{
   //  for(let p of this.productsAddedToCart){
   //    if(p.name == newProduct.name){
