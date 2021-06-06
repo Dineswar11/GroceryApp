@@ -16,6 +16,9 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { SearchPipe } from './pipes/search.pipe';
+import { MinPricePipe } from './pipes/min-price.pipe';
+import { MaxPricePipe } from './pipes/max-price.pipe';
 
 @NgModule({
   declarations: [
@@ -30,6 +33,9 @@ import { RegisterComponent } from './register/register.component';
     PagenotfoundComponent,
     LoginComponent,
     RegisterComponent,
+    SearchPipe,
+    MinPricePipe,
+    MaxPricePipe,
     
   ],
   imports: [

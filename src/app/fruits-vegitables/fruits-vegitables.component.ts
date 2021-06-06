@@ -18,6 +18,12 @@ export class FruitsVegitablesComponent implements OnInit,OnDestroy {
 
   subscription:Subscription;
 
+  seachTerm:string;
+
+  minPrice:number;
+
+  maxPrice:number;
+
   constructor(private frObj:FruitsVegitablesService,private router:Router) { }
 
   ngOnInit(): void {

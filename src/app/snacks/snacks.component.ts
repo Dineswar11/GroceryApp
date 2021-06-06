@@ -14,7 +14,13 @@ export class SnacksComponent implements OnInit, OnDestroy {
 
   snacksData:snacksArr[]=[];
 
-  subscription:Subscription
+  subscription:Subscription;
+
+  seachTerm:string;
+
+  minPrice:number;
+
+  maxPrice:number;
 
   constructor(private snacksService:SnacksService) { }
 
