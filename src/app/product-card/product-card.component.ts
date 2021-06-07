@@ -17,6 +17,8 @@ export class ProductCardComponent implements OnInit {
 
   discount:number;
 
+  productAddedToCart:boolean;
+
   constructor(private Router:Router,private addToCartDS:AddtocartService) { }
 
   ngOnInit(): void {
@@ -38,7 +40,7 @@ export class ProductCardComponent implements OnInit {
     }
 
     addToCart(){
-      this.addToCartDS.newProductAddedToCart(this.productData)
+      this.productAddedToCart = this.addToCartDS.newProductAddedToCart(this.productData)
     }
 
 }

@@ -15,6 +15,8 @@ export class ProductDetailsComponent implements OnInit {
 
   category:string;
 
+  productAddedToCart:boolean;
+
   constructor(private ActivatedRoute: ActivatedRoute,private Router:Router, private SnacksDataService: SnacksService,
               private Fruits_Vegetables: FruitsVegitablesService,private CartDS:AddtocartService) { }
 
@@ -47,7 +49,7 @@ export class ProductDetailsComponent implements OnInit {
   }
 
   addToCart(){
-    this.CartDS.newProductAddedToCart(this.productData)
+    this.productAddedToCart = this.CartDS.newProductAddedToCart(this.productData)
   }
 
 }

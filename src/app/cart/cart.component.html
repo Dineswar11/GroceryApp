@@ -25,11 +25,11 @@
         
           <div class="row">
          
-            <div class="col-sm-6 mt-2 p-1 d-flex justify-content-center align-items-center">
+            <div class="col-md-6 mt-2 p-1 d-flex justify-content-center align-items-center">
               <img src={{products?.images[0].file.url}} width="75%" alt="">
             </div>
              
-            <div class="col-sm-6 mt-2 p-1">
+            <div class="col-md-6 mt-2 p-1">
               <h3>{{products?.name}}</h3>
               <hr>
               <h6 class="text-warning"><s> Price: {{products?.price}}</s></h6>
@@ -47,7 +47,7 @@
               </div>
               <hr>
               <button class="btn btn-outline-danger float-end" (click)='deleteItem(ind)' >
-                Remove From Cart
+                <i class="fas fa-trash-alt"></i>
               </button>
               <h4 id="k">Total price: {{products?.sale_price*products?.quantity}}</h4>
            </div>

@@ -17,7 +17,6 @@ export class CartComponent implements OnInit {
   constructor(private CartDS:AddtocartService) { }
   ngOnInit(): void {
     this.productsAddedToCart = (this.CartDS.getTheProductsInCart())
-    console.log(this.productsAddedToCart)
   }
 
   deleteItem(ind){
