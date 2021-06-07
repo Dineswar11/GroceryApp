@@ -5,14 +5,17 @@ nav{
 
 .brand{
     font-weight: bold;
-    font-family:Arial, Helvetica, sans-serif;
-    color:#ffffff;
-    text-shadow: 1px 1px 2px grey;
+    font-family: 'Pacifico', cursive;
+    color:#0e7913;
+    text-shadow: 1px 1px 2px rgb(173, 189, 173);
 }
 
 .shop,.cart,.login,.register{
     position: relative;
-    background-color: transparent!important;
+    background-color: #67b317!important;
+    border: none;
+    color: #9DE254;
+    
 }
 
 .cart[value]::before{
