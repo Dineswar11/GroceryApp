@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 import Typewriter from 't-writer.js'
 import { userClass } from '../Models/user.model';
 import { NewslettersubscriptionService } from '../Services/newslettersubscription.service';
@@ -15,7 +16,7 @@ export class HomeComponent implements OnInit , AfterViewInit{
   @ViewChild('tw1') typewriterElement1: ElementRef;
   @ViewChild('tw3') typewriterElement3: ElementRef;
 
-  constructor(private newsletterSub:NewslettersubscriptionService) { }
+  constructor(private newsletterSub:NewslettersubscriptionService,private toastr:ToastrService) { }
 
   ngOnInit(): void {
   }
@@ -54,6 +55,7 @@ export class HomeComponent implements OnInit , AfterViewInit{
   addNewLetterSubscription(){
     this.newsletterSub.addNewsLetterSubscription(this.users).subscribe(
       res=>{
+        this.toastr.success('Subscribtion Added 🤩')
       },
       err=>{
         console.log('err in adding email subscription',err)

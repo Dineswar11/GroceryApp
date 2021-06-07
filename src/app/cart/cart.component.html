@@ -46,7 +46,7 @@
                 </button> 
               </div>
               <hr>
-              <button class="btn btn-outline-danger float-end" (click)='deleteItem(ind)' >
+              <button class="btn btn-outline-danger float-end" (click)='deleteItem(products,ind)' >
                 <i class="fas fa-trash-alt"></i>
               </button>
               <h4 id="k">Total price: {{products?.sale_price*products?.quantity}}</h4>
