@@ -21,7 +21,7 @@ export class AddtocartService {
       }
       else return false
     }
-    else this.productsAddedToCart.push(newProduct)
+    else this.productsAddedToCart.push(newProduct); return true
   }
 
   deleteProductFromCart(index) {
