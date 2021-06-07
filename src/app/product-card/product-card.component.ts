@@ -43,9 +43,9 @@ export class ProductCardComponent implements OnInit {
     addToCart(){
       this.productAddedToCart = this.addToCartDS.newProductAddedToCart(this.productData)
       if(this.productAddedToCart){
-      this.toastr.success('Product Added To Cart😊');
+      this.toastr.success(this.productData.name+' Added To Cart😊');
       }
-      else this.toastr.info('Product Already Exists in Cart 😙');
+      else this.toastr.info(this.productData.name+' Already Exists in Cart 😙');
     }
 
 }
