@@ -4,6 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms'
 
+import { ToastrModule } from 'ngx-toastr';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './footer/footer.component';
@@ -43,7 +44,15 @@ import { MaxPricePipe } from './pipes/max-price.pipe';
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ToastrModule.forRoot({
+      timeOut: 2500,
+      positionClass: 'toast-bottom-left',
+      preventDuplicates: false,
+      progressBar:true,
+      progressAnimation:'increasing',
+      closeButton:true
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

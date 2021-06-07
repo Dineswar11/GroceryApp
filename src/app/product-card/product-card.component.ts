@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { opacity, popup } from '../animation';
 import { AddtocartService } from '../Services/addtocart.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-product-card',
@@ -19,7 +20,7 @@ export class ProductCardComponent implements OnInit {
 
   productAddedToCart:boolean;
 
-  constructor(private Router:Router,private addToCartDS:AddtocartService) { }
+  constructor(private Router:Router,private addToCartDS:AddtocartService,private toastr:ToastrService) { }
 
   ngOnInit(): void {
   
@@ -41,6 +42,10 @@ export class ProductCardComponent implements OnInit {
 
     addToCart(){
       this.productAddedToCart = this.addToCartDS.newProductAddedToCart(this.productData)
+      if(this.productAddedToCart){
+      this.toastr.success('Product Added To Cart😊');
+      }
+      else this.toastr.info('Product Already Exists in Cart 😙');
     }
 
 }
