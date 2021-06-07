@@ -24,6 +24,15 @@ h4{
     padding: 0px;
 }
 
+#shop{
+    background-color: #67b317;
+    border: none;
+}
+#sh{
+    font-weight: bold;
+    color: rgb(3, 68, 3);
+}
+
 @media screen and (max-width:500px) {
     .typewriter .display-4{
         font-size: calc(1rem + 1.75vw);
@@ -32,6 +41,12 @@ h4{
 /*******
 2.Features
 *******/
+
+#features{
+    background-color: #7BCC37;
+    font-weight: bold;
+    color: green;
+}
 .img-1{
     background-color: lightgreen;
     width: 100px;
@@ -71,6 +86,11 @@ h4{
               transform: translateX(-6px) rotate(-1.2deg);
     }
 }
+
+#card{
+    background-color: #E69A5A;
+}
+
 
 /**********
 3.Shop Now!!
@@ -156,6 +176,18 @@ h4{
               box-shadow: 10px 10px 1px 0px rgba(0, 0, 0, 0.5);
     }
   }
+
+  #whyus{
+      background-color: #E69A5A;
+      border-radius: 5px;
+      color: #633408;
+  }
+
+  #shopnow{
+      background-color: #7BCC37;
+      color: green;
+      font-weight: bold;
+  }
 /**********
 5.Coustmer Reviews
 **********/
@@ -173,6 +205,10 @@ h4{
 .d-grid{
     display: grid;
     place-items: center;
+}
+
+#name{
+    color: #7BCC37;
 }
 
 .profile{
@@ -197,6 +233,13 @@ h4{
 }
 .email-newsletter:hover .card{
     animation: text-pop-up-top 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards;
+}
+
+#emailcard{
+    background-color:#E69A5A;
+}
+#submit{
+    background-color: #7BCC37;
 }
 
 @keyframes text-pop-up-top {

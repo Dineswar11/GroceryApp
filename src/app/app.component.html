@@ -1,7 +1,7 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light">
   <div class="container">
-    <a class="navbar-brand brand" routerLink='home'>
+    <a class="navbar-brand brand " routerLink='home'>
       <img class="navbar-logo" src="../assets/Images/logo-removebg-preview.png" width="50px" alt="">
           Daily Fresh
     </a>
@@ -23,19 +23,19 @@
         </li>
        
         <li *ngIf='numberOfProductsAdded==0' class="nav-item">
-          <button class="nav-link btn btn-light p-2 text-dark cart shadow ms-2" routerLink="cart" routerLinkActive="active"><i class="fas fa-shopping-cart"></i>Cart
+          <button class="nav-link btn  p-2  cart shadow ms-2" routerLink="cart" routerLinkActive="active"><i class="fas fa-shopping-cart"></i>Cart
           </button>
         </li>
         <li *ngIf='numberOfProductsAdded>0' class="nav-item">
-          <button [value]='numberOfProductsAdded' class="nav-link btn btn-light p-2 text-dark cart shadow ms-2" routerLink="cart" routerLinkActive="active"><i class="fas fa-shopping-cart"></i>Cart
+          <button [value]='numberOfProductsAdded' class="nav-link btn  p-2  cart shadow ms-2" routerLink="cart" routerLinkActive="active"><i class="fas fa-shopping-cart"></i>Cart
           </button>
         </li>
         <li class="nav-item">
-          <button class="nav-link btn btn-light p-2 text-dark register shadow ms-2" routerLink="register" routerLinkActive="active"><i class="fas fa-user-plus"></i>Regiter
+          <button class="nav-link btn  p-2  register shadow ms-2" routerLink="register" routerLinkActive="active"><i class="fas fa-user-plus"></i>Regiter
           </button>
         </li>
         <li class="nav-item">
-          <button class="nav-link btn btn-light p-2 text-dark login shadow ms-2" routerLink="login" routerLinkActive="active"><i class="fas fa-user-circle"></i>Login
+          <button class="nav-link btn t p-2  login shadow ms-2" routerLink="login" routerLinkActive="active"><i class="fas fa-user-circle"></i>Login
           </button>
         </li> 
       </ul>
