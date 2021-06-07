@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { AddtocartService } from '../Services/addtocart.service';
 import { FruitsVegitablesService } from '../Services/fruits-vegitables.service';
 import { SnacksService } from '../Services/snacks.service';
@@ -15,8 +16,10 @@ export class ProductDetailsComponent implements OnInit {
 
   category:string;
 
+  productAddedToCart:boolean;
+
   constructor(private ActivatedRoute: ActivatedRoute,private Router:Router, private SnacksDataService: SnacksService,
-              private Fruits_Vegetables: FruitsVegitablesService,private CartDS:AddtocartService) { }
+              private Fruits_Vegetables: FruitsVegitablesService,private CartDS:AddtocartService,private toastr:ToastrService) { }
 
   ngOnInit(): void {
 
@@ -47,7 +50,10 @@ export class ProductDetailsComponent implements OnInit {
   }
 
   addToCart(){
-    this.CartDS.newProductAddedToCart(this.productData)
-  }
-
+    this.productAddedToCart = this.CartDS.newProductAddedToCart(this.productData)
+    if(this.productAddedToCart){
+      this.toastr.success(this.productData.name+' Added To Cart😊');
+      }
+      else this.toastr.info(this.productData.name+' Already Exists in Cart 😙');
+    }
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { hinge, opacity, slideright } from '../animation';
 import { AddtocartService } from '../Services/addtocart.service';
 
@@ -14,14 +15,14 @@ export class CartComponent implements OnInit {
 
   productsAddedToCart:any;
 
-  constructor(private CartDS:AddtocartService) { }
+  constructor(private CartDS:AddtocartService,private toastr:ToastrService) { }
   ngOnInit(): void {
     this.productsAddedToCart = (this.CartDS.getTheProductsInCart())
-    console.log(this.productsAddedToCart)
   }
 
-  deleteItem(ind){
+  deleteItem(product,ind){
     this.CartDS.deleteProductFromCart(ind);
+    this.toastr.error(product.name+' Removed from the Cart 😓')
   }
   
 }
