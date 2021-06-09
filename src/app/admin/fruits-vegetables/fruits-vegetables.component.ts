@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Subscription } from 'rxjs';
+import { fruitsvegitablesArr } from 'src/app/Models/fruits-vegitables.model';
+import { FruitsVegitablesService } from 'src/app/Services/fruits-vegitables.service';
 
 @Component({
   selector: 'app-fruits-vegetables',
@@ -7,9 +11,34 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FruitsVegetablesComponent implements OnInit {
 
-  constructor() { }
+  showFilterByTitle: boolean = true
+
+  fruitsVegetablesData: fruitsvegitablesArr[] = [];
+
+  subscription: Subscription;
+
+  seachTerm: string;
+
+  minPrice: number;
+
+  maxPrice: number;
+
+  constructor(private frObj: FruitsVegitablesService, private router: Router) { }
 
   ngOnInit(): void {
+    this.subscription = this.frObj.getFruitsAndVegitables().subscribe(
+      products => {
+        this.fruitsVegetablesData = products;
+      },
+      err => {
+        console.log("error is", err)
+      }
+    )
   }
+
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe()
+  }
+
 
 }

@@ -1,5 +1,11 @@
 .navbar{
     background-color: chartreuse;
+    position: relative;
+}
+
+.navigation{
+    position: fixed;
+    top: 10%;
 }
 
 .row{

@@ -1,1 +1,21 @@
-<p>viewproducts works!</p>
+<div class="card">
+    <button (click)='onSelectProduct(productData.id)' style="background-color: transparent;">
+        <div class="card-body text-center">
+            <div class="row">
+                <div class="col-3">
+                    <img src={{productData.images[0].file.url}} width="100vw" alt="">
+                </div>
+                <div class="col-3 mt-4">
+                    {{productData.name}}
+                </div>
+                <div class="col-3 mt-4">
+                    {{productData.price | currency:'INR'}}
+                </div>
+                <div class="col-3 mt-4">
+                    {{productData.sale_price | currency:'INR'}}
+                </div>
+            </div>
+        </div>
+    </button>
+
+</div>

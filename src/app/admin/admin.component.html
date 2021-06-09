@@ -1,26 +1,29 @@
 <div class="row">
     <div *ngIf='!hideNavbar' class="navbar col-2 shadow-lg">
         <div class="d-flex flex-column justify-content-center align-items-center w-100 h-100">
-            <img src="../../assets/Images/logo-removebg-preview.png" width="150px" alt="">
-            <h3>Daily Fresh</h3>
-            <hr>
-            <ul class="list-unstyled text-center">
-                <li class="dropdown">
-                    <button class="btn" (click)='showDropdown=showDropdown?false:true'>
-                        <a routerLink="home">Products</a>
-                    </button>
-                </li>
-                <ul *ngIf='showDropdown' class="list-unstyled text-center mt-1">
-                    <li><a href="">Fruits & Vegetables</a></li>
-                    <li><a href="">Snacks</a></li>
+            <div class="navigation">
+                <img src="../../assets/Images/logo-removebg-preview.png" width="150px" alt="">
+                <h3>Daily Fresh</h3>
+                <hr>
+                <ul class="list-unstyled text-center">
+                    <li><a routerLink='home'>Home</a></li>
+                    <li class="dropdown">
+                        <button class="btn" (click)='showDropdown=showDropdown?false:true'>
+                            Products
+                        </button>
+                    </li>
+                    <ul *ngIf='showDropdown' class="list-unstyled text-center mt-1">
+                        <li><a routerLink="fruits_vegetables">Fruits & Vegetables</a></li>
+                        <li><a routerLink="snacks">Snacks</a></li>
+                    </ul>
+                    <li>
+                        <button class="btn"><a routerLink="users"> Users</a></button>
+                    </li>
                 </ul>
-                <li>
-                    <button class="btn"><a routerLink="users"> Users</a></button>
-                </li>
-            </ul>
-            <button (click)='hideNavbar=true' class="btn hide-navbar">
-                <i class="fas fa-chevron-circle-left"></i>
-            </button>
+                <button (click)='hideNavbar=true' class="btn hide-navbar">
+                    <i class="fas fa-chevron-circle-left"></i>
+                </button>
+            </div>
         </div>
     </div>
     <div *ngIf='!hideNavbar' class="col-10">
