@@ -40,5 +40,10 @@ export class FruitsVegetablesComponent implements OnInit {
     this.subscription.unsubscribe()
   }
 
+  navigateToNewProduct(){
+    console.log(this.router.url)
+    this.router.navigateByUrl('/admin/newproduct')
+  }
+
 
 }

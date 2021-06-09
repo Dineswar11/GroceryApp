@@ -4,6 +4,7 @@ import { AdminComponent } from './admin.component';
 import { EditproductsComponent } from './editproducts/editproducts.component';
 import { FruitsVegetablesComponent } from './fruits-vegetables/fruits-vegetables.component';
 import { HomeComponent } from './home/home.component';
+import { NewproductComponent } from './newproduct/newproduct.component';
 import { SnacksComponent } from './snacks/snacks.component';
 import { UsersComponent } from './users/users.component';
 
@@ -15,6 +16,7 @@ const routes: Routes = [
     {path:'snacks/:id',component:EditproductsComponent},
     {path:'fruits_vegetables',component:FruitsVegetablesComponent},
     {path:'fruits_vegetables/:id',component:EditproductsComponent},
+    {path:'newproduct',component:NewproductComponent},
     {path:'',redirectTo:'home',pathMatch:'full'}
   ]},
   ]

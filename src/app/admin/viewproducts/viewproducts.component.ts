@@ -21,7 +21,7 @@ export class ViewproductsComponent implements OnInit {
       this.Router.navigateByUrl('/admin/snacks/'+id)
     }
     if(this.Router.url === '/admin/fruits_vegetables'){
-     this.Router.navigateByUrl('/admin/fruits-vegitables/'+id)
+     this.Router.navigateByUrl('/admin/fruits_vegetables/'+id)
     }
   }
 
