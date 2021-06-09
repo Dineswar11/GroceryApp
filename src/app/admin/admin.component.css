@@ -1,0 +1,27 @@
+.navbar{
+    background-color: chartreuse;
+}
+
+.row{
+    margin: 0px;
+    padding: 0px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    color: crimson;
+}
+
+.col-12{
+    position: relative;
+}
+
+.show-navbar{
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+}
