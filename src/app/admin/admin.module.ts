@@ -10,6 +10,7 @@ import { SnacksComponent } from './snacks/snacks.component';
 import { FruitsVegetablesComponent } from './fruits-vegetables/fruits-vegetables.component';
 import { ViewproductsComponent } from './viewproducts/viewproducts.component';
 import { EditproductsComponent } from './editproducts/editproducts.component';
+import { NewproductComponent } from './newproduct/newproduct.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { EditproductsComponent } from './editproducts/editproducts.component';
     SnacksComponent,
     FruitsVegetablesComponent,
     ViewproductsComponent,
-    EditproductsComponent
+    EditproductsComponent,
+    NewproductComponent
   ],
   imports: [
     CommonModule,
