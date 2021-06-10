@@ -14,9 +14,10 @@ const routes: Routes = [
     {path:'users',component:UsersComponent},
     {path:'snacks',component:SnacksComponent},
     {path:'snacks/:id',component:EditproductsComponent},
+    {path:'snacks_newproduct',component:NewproductComponent},
     {path:'fruits_vegetables',component:FruitsVegetablesComponent},
     {path:'fruits_vegetables/:id',component:EditproductsComponent},
-    {path:'newproduct',component:NewproductComponent},
+    {path:'fruits_vegetables_newproduct',component:NewproductComponent},
     {path:'',redirectTo:'home',pathMatch:'full'}
   ]},
   ]

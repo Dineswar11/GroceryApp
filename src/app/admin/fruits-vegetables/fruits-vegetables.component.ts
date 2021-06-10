@@ -42,7 +42,7 @@ export class FruitsVegetablesComponent implements OnInit {
 
   navigateToNewProduct(){
     console.log(this.router.url)
-    this.router.navigateByUrl('/admin/newproduct')
+    this.router.navigateByUrl('/admin/fruits_vegetables_newproduct')
   }
 
 

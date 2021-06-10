@@ -17,4 +17,12 @@ export class SnacksService {
   getSnacksDataWithId(id):Observable<snacksArr>{
     return this.HttpClient.get<snacksArr>('http://localhost:3000/snacks/'+id)
   }
+
+  updateSnacksdetails(Product):Observable<any>{
+    return this.HttpClient.put("http://localhost:3000/snacks/"+Product.id,Product)
+  }
+
+  delete(id){
+    return this.HttpClient.delete("http://localhost:3000/snacks/"+id)
+  }
 }

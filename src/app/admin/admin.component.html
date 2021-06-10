@@ -30,7 +30,7 @@
         <router-outlet></router-outlet>
     </div>
     <div *ngIf='hideNavbar' class="col-12">
-        <button (click)='hideNavbar=false' class="btn show-navbar">
+        <button (click)='hideNavbar=false' class="btn show-navbar" style="position: fixed; top: 1px;">
             <i class="fas fa-chevron-circle-right"></i>
         </button>
         <router-outlet></router-outlet>
