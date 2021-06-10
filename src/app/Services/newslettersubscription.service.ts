@@ -12,4 +12,8 @@ export class NewslettersubscriptionService {
   addNewsLetterSubscription(email):Observable<any>{
       return this.HttpClient.post("http://localhost:3000/users",email)
   }
+
+  getUserDetails():Observable<any[]>{
+    return this.HttpClient.get<any[]>('http://localhost:3000/users')
+  }
 }
