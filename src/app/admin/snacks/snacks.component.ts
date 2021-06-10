@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { snacksArr } from 'src/app/Models/snacks.model';
 import { SnacksService } from 'src/app/Services/snacks.service';
@@ -22,7 +23,7 @@ export class SnacksComponent implements OnInit {
 
   maxPrice:number;
 
-  constructor(private snacksService:SnacksService) { }
+  constructor(private snacksService:SnacksService, private router: Router) { }
 
   ngOnInit(): void {
     this.subscription = this.snacksService.getSnackData().subscribe(
@@ -39,5 +40,9 @@ export class SnacksComponent implements OnInit {
     this.subscription.unsubscribe();
   }
 
+  navigateToNewProduct(){
+    console.log(this.router.url)
+    this.router.navigateByUrl('/admin/snacks_newproduct')
+  }
 
 }

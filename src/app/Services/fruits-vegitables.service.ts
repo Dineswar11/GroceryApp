@@ -19,4 +19,12 @@ export class FruitsVegitablesService {
     return this.hc.get<fruitsvegitablesArr>('http://localhost:3000/fruits_vegitables/'+id)
   }
 
+  updateFruitsdetails(Product):Observable<any>{
+    return this.hc.put("http://localhost:3000/fruits_vegitables/"+Product.id,Product)
+  }
+
+  delete(id){
+    return this.hc.delete("http://localhost:3000/fruits_vegitables/"+id)
+  }
+
 }
