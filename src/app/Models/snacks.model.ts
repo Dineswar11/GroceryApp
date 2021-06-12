@@ -1,59 +1,57 @@
-export interface snacksArr{
-    name:string
-    sku:number
-    active:boolean
-    quantity:number
-    images:[
-        {
-            file:{
-                id:string
-                date_uploaded:string
-                length:number
-                md5:string
-                filename:number
-                content_type:string
-                metadata:number
-                url:string
-                width:number
-                height:number
-            }
-            id:string
-        },
-        {
-            file:{
-                id:string
-                date_uploaded:string
-                length:number
-                md5:string
-                filename:number
-                content_type:string
-                metadata:number
-                url:string
-                width:number
-                height:number
-            }
-            id:string
-        }
-    ]
-    bundle:boolean
-    sale:boolean
-    price:number
-    sale_price:number
-    variable:boolean
-    description:string
-    meta_title:number
-    meta_description:number
-    slug:string
-    attributes:{
-        ingredients:string
-    }
-    type:string
-    stock_tracking:boolean
-    currency:string
-    delivery:string
-    tax_class:string
-    date_created:string
-    stock_status:number
-    date_updated:string
-    id:string
+export interface snacksArr {
+    name: string
+    sku: number
+    active: boolean
+    quantity: number
+    url: string
+    url1: string
+    bundle: boolean
+    sale: boolean
+    price: number
+    sale_price: number
+    variable: boolean
+    description: string
+    meta_title: number
+    meta_description: number
+    slug: string
+    ingredients: string
+    type: string
+    stock_tracking: boolean
+    currency: string
+    delivery: string
+    tax_class: string
+    date_created: string
+    stock_status: number
+    date_updated: string
+    id: string
+}
+
+export class snacksClass {
+    constructor(
+        public name: string,
+        public sku: number,
+        public active: boolean,
+        public quantity: number,
+        public url: string,
+        public url1: string,
+        public bundle: boolean,
+        public sale: boolean,
+        public price: number,
+        public sale_price: number,
+        public variable: boolean,
+        public description: string,
+        public meta_title: number,
+        public meta_description: number,
+        public slug: string,
+        public ingredients: string,
+        public type: string,
+        public stock_tracking: boolean,
+        public currency: string,
+        public delivery: string,
+        public tax_class: string,
+        public date_created: string,
+        public stock_status: number,
+        public date_updated: string,
+        public id: string,
+    ) { }
 }

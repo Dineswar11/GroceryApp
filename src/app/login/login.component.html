@@ -25,7 +25,7 @@
                 <div class="card">
                     <div class="card-body">
                         <h3 class="display-6">Sign In</h3>
-                        <form class="text-white" #ref="ngForm">
+                        <form class="text-white" #ref="ngForm" (ngSubmit)="validateDetails()">
                             <div class="mb-3">
                                 <label for="un" class="form-label">Username</label>
                                 <input type="text" class="form-control" id="un" name="username"
@@ -44,7 +44,7 @@
                                 <div class="input-group">
                                     <input type="text" class="form-control" id="pw" name="password"
                                         placeholder="Enter Password.." [(ngModel)]='userDetails.password'>
-                                    <span class="input-group-text p-0 m-0" ><button (click)='showPassword=true' class="btn w-100"><i class="fas fa-eye-slash"></i></button></span>
+                                    <span class="input-group-text p-0 m-0" ><button (click)='showPassword=true' type="button" class="btn w-100"><i class="fas fa-eye-slash"></i></button></span>
                                 </div>
                             </div>
                             <a href="" class="text-info">Forgot Password?</a>

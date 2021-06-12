@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { slideleft, slideright } from '../animation';
 import { userDetails } from '../Models/user.model';
 
@@ -14,9 +15,24 @@ export class LoginComponent implements OnInit {
 
   userDetails= new userDetails('','');
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
+  }
+
+  validateDetails(){
+    if(this.userDetails.username!='admin'){
+      alert('invalid username')
+    }
+    else{
+      if(this.userDetails.password!='admin'){
+        alert('invalid password')
+      }
+      else{
+        localStorage.setItem("username","admin")
+        this.router.navigate(["/admin"]);
+      }
+    }
   }
 
 }

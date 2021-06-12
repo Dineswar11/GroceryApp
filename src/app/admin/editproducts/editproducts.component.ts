@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FruitsVegitablesService } from 'src/app/Services/fruits-vegitables.service';
 import { SnacksService } from 'src/app/Services/snacks.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-editproducts',
@@ -15,7 +16,7 @@ export class EditproductsComponent implements OnInit {
   category: number;
 
   constructor(private ActivatedRoute: ActivatedRoute, private Router: Router, private SnacksDataService: SnacksService,
-    private Fruits_Vegetables: FruitsVegitablesService) { }
+    private Fruits_Vegetables: FruitsVegitablesService,private toastr:ToastrService) { }
 
   ngOnInit(): void {
 
@@ -52,7 +53,8 @@ export class EditproductsComponent implements OnInit {
   updateSnacksData() {
     this.SnacksDataService.updateSnacksdetails(this.productData).subscribe(
       res => {
-
+        this.Router.navigateByUrl('/admin/snacks')
+        this.toastr.success(this.productData.name+' Updated');
       },
       err => {
         console.log('err in updating snacks data', err);
@@ -63,7 +65,8 @@ export class EditproductsComponent implements OnInit {
   updateFruitsProduct() {
     this.Fruits_Vegetables.updateFruitsdetails(this.productData).subscribe(
       res => {
-
+        this.Router.navigateByUrl('/admin/fruits_vegetables')
+        this.toastr.success(this.productData.name+' Updated');
       },
       err => {
         console.log('err in updating fruits & vegetables data', err);
@@ -75,6 +78,7 @@ export class EditproductsComponent implements OnInit {
     this.SnacksDataService.delete(this.productData.id).subscribe(
       res => {
         this.Router.navigateByUrl('/admin/snacks')
+        this.toastr.warning(this.productData.name+' Deleted');
       },
       err => {
         console.log('err in deleting snacks data is', err)
@@ -86,6 +90,7 @@ export class EditproductsComponent implements OnInit {
     this.Fruits_Vegetables.delete(this.productData.id).subscribe(
       res => {
         this.Router.navigateByUrl('/admin/fruits_vegetables')
+        this.toastr.warning(this.productData.name+' Deleted');
       },
       err => {
         console.log('err in deleting fruits data is', err)

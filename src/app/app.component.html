@@ -31,11 +31,19 @@
           </button>
         </li>
         <li class="nav-item">
-          <button class="nav-link btn  p-2  register shadow ms-2" routerLink="register" routerLinkActive="active"><i class="fas fa-user-plus"></i>Regiter
+          <button class="nav-link btn  p-2  register shadow ms-2" routerLink="register" *ngIf="!LoginDS.loginStatus()" routerLinkActive="active"><i class="fas fa-user-plus"></i>Regiter
           </button>
         </li>
         <li class="nav-item">
-          <button class="nav-link btn t p-2  login shadow ms-2" routerLink="login" routerLinkActive="active"><i class="fas fa-user-circle"></i>Login
+          <button class="nav-link btn t p-2  login shadow ms-2" routerLink="login" *ngIf="!LoginDS.loginStatus()" routerLinkActive="active"><i class="fas fa-user-circle"></i>Login
+          </button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link btn t p-2  login shadow ms-2" routerLink="admin" *ngIf="LoginDS.loginStatus()" routerLinkActive="active"><i class="fas fa-user-circle"></i>Admin
+          </button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link btn t p-2  login shadow ms-2" *ngIf="LoginDS.loginStatus()" (click)="LoginDS.logout()" routerLink="login" routerLinkActive="active"><i class="fas fa-sign-out-alt"></i>Log Out
           </button>
         </li> 
       </ul>

@@ -27,4 +27,8 @@ export class FruitsVegitablesService {
     return this.hc.delete("http://localhost:3000/fruits_vegitables/"+id)
   }
 
+  createNewFruitsProduct(newProduct){
+    return this.hc.post("http://localhost:3000/fruits_vegitables",newProduct)
+  }
+
 }
