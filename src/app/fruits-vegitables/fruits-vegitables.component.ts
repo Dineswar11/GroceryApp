@@ -24,6 +24,8 @@ export class FruitsVegitablesComponent implements OnInit,OnDestroy {
 
   maxPrice:number;
 
+  p:number=1;
+
   constructor(private frObj:FruitsVegitablesService,private router:Router) { }
 
   ngOnInit(): void {

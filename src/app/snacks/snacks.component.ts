@@ -22,6 +22,8 @@ export class SnacksComponent implements OnInit, OnDestroy {
 
   maxPrice:number;
 
+  p:number=1
+
   constructor(private snacksService:SnacksService) { }
 
   ngOnInit(): void {

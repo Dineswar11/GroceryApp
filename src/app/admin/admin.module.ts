@@ -11,6 +11,7 @@ import { FruitsVegetablesComponent } from './fruits-vegetables/fruits-vegetables
 import { ViewproductsComponent } from './viewproducts/viewproducts.component';
 import { EditproductsComponent } from './editproducts/editproducts.component';
 import { NewproductComponent } from './newproduct/newproduct.component';
+import { NgxPaginationModule } from 'ngx-pagination'
 
 
 @NgModule({
@@ -22,12 +23,13 @@ import { NewproductComponent } from './newproduct/newproduct.component';
     FruitsVegetablesComponent,
     ViewproductsComponent,
     EditproductsComponent,
-    NewproductComponent
+    NewproductComponent,
   ],
   imports: [
     CommonModule,
     AdminRoutingModule,
-    FormsModule
+    FormsModule,
+    NgxPaginationModule
   ]
 })
 export class AdminModule { }

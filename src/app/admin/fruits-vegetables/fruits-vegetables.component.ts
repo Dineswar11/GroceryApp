@@ -23,6 +23,8 @@ export class FruitsVegetablesComponent implements OnInit {
 
   maxPrice: number;
 
+  p:number=1;
+
   constructor(private frObj: FruitsVegitablesService, private router: Router) { }
 
   ngOnInit(): void {
