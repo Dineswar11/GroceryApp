@@ -15,6 +15,8 @@ export class CartComponent implements OnInit {
 
   productsAddedToCart:any;
 
+  sum:number=0;
+
   constructor(private CartDS:AddtocartService,private toastr:ToastrService) { }
   ngOnInit(): void {
     this.productsAddedToCart = (this.CartDS.getTheProductsInCart())
@@ -23,6 +25,13 @@ export class CartComponent implements OnInit {
   deleteItem(product,ind){
     this.CartDS.deleteProductFromCart(ind);
     this.toastr.error(product.name+' Removed from the Cart 😓')
+  }
+
+  totalPrice(){
+    for(let products of this.productsAddedToCart){
+      this.sum=this.sum+(products.sale_price)*(products.quantity)
+    }
+    console.log(this.sum)
   }
   
 }
