@@ -62,7 +62,27 @@
   </div>
   
 
+  <div *ngIf="productsAddedToCart.length!==0" class="mt-3 mb-3">
+    <button (click)="totalPrice()" data-bs-toggle="modal" data-bs-target="#checkout" class="btn btn-primary text-center">Checkout</button>
+  </div>
+  <div class="modal fade" id="checkout" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Checkout</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Total Price - {{sum}} <br>
+          Number Of Items - {{productsAddedToCart.length}}
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Proceed to Checkout</button>
+        </div>
+      </div>
+    </div>
+  </div>
   
-
 </div>
 
