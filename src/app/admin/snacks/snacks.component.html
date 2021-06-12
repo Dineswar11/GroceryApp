@@ -36,14 +36,14 @@
                     Name
                 </div>
                 <div class="col-3">
-                    Sale Price
+                    Mrp
                 </div>
                 <div class="col-3">
-                    Mrp
+                    Sale Price
                 </div>
             </div>
         </div>
-        <div *ngFor='let snacks of snacksData | paginate: { itemsPerPage: 8, currentPage: p }'>
+        <div *ngFor='let snacks of snacksData | search:seachTerm | minPrice:minPrice | maxPrice:maxPrice | paginate: { itemsPerPage: 8, currentPage: p }'>
             <app-viewproducts [productData]=snacks></app-viewproducts>
         </div>
     </div>

@@ -12,6 +12,7 @@ import { ViewproductsComponent } from './viewproducts/viewproducts.component';
 import { EditproductsComponent } from './editproducts/editproducts.component';
 import { NewproductComponent } from './newproduct/newproduct.component';
 import { NgxPaginationModule } from 'ngx-pagination'
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { NgxPaginationModule } from 'ngx-pagination'
     CommonModule,
     AdminRoutingModule,
     FormsModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    SharedModule
   ]
 })
 export class AdminModule { }

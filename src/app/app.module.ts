@@ -17,10 +17,8 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-import { SearchPipe } from './pipes/search.pipe';
-import { MinPricePipe } from './pipes/min-price.pipe';
-import { MaxPricePipe } from './pipes/max-price.pipe';
 import {NgxPaginationModule} from 'ngx-pagination';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -35,9 +33,6 @@ import {NgxPaginationModule} from 'ngx-pagination';
     PagenotfoundComponent,
     LoginComponent,
     RegisterComponent,
-    SearchPipe,
-    MinPricePipe,
-    MaxPricePipe,
   ],
   imports: [
     BrowserModule,
@@ -53,7 +48,8 @@ import {NgxPaginationModule} from 'ngx-pagination';
       progressAnimation:'increasing',
       closeButton:true
     }),
-    NgxPaginationModule
+    NgxPaginationModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
