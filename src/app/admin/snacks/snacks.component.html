@@ -43,8 +43,9 @@
                 </div>
             </div>
         </div>
-        <div *ngFor='let snacks of snacksData '>
+        <div *ngFor='let snacks of snacksData | paginate: { itemsPerPage: 8, currentPage: p }'>
             <app-viewproducts [productData]=snacks></app-viewproducts>
         </div>
     </div>
+    <pagination-controls class="mt-5 mb-5 d-block text-center" (pageChange)="p=$event"></pagination-controls>
 </div>

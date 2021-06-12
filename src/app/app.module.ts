@@ -20,6 +20,7 @@ import { RegisterComponent } from './register/register.component';
 import { SearchPipe } from './pipes/search.pipe';
 import { MinPricePipe } from './pipes/min-price.pipe';
 import { MaxPricePipe } from './pipes/max-price.pipe';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,6 @@ import { MaxPricePipe } from './pipes/max-price.pipe';
     SearchPipe,
     MinPricePipe,
     MaxPricePipe,
-    
   ],
   imports: [
     BrowserModule,
@@ -52,7 +52,8 @@ import { MaxPricePipe } from './pipes/max-price.pipe';
       progressBar:true,
       progressAnimation:'increasing',
       closeButton:true
-    })
+    }),
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AdminGuard } from './admin.guard';
 import { CartComponent } from './cart/cart.component';
 import { FruitsVegitablesComponent } from './fruits-vegitables/fruits-vegitables.component';
 import { HomeComponent } from './home/home.component';
@@ -20,7 +21,7 @@ const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'register',component:RegisterComponent},
   {path:'',redirectTo:'home',pathMatch:'full'},
-  { path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule) },
+  { path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule),canActivate:[AdminGuard] },
   {path:'**',component:PagenotfoundComponent}
 ]
 

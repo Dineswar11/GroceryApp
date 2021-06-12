@@ -24,8 +24,9 @@
         </div>
     </div>
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 mt-1">
-        <div class="col mt-4" *ngFor='let fruitsVegetables of fruitsVegetablesData | search:seachTerm | minPrice:minPrice | maxPrice:maxPrice'>
+        <div class="col mt-4" *ngFor='let fruitsVegetables of fruitsVegetablesData | search:seachTerm | minPrice:minPrice | maxPrice:maxPrice | paginate: { itemsPerPage: 8, currentPage: p }'>
             <app-product-card [productData]=fruitsVegetables ></app-product-card>
         </div>
     </div>
+    <pagination-controls class="mt-5 mb-5 d-block text-center" (pageChange)="p=$event"></pagination-controls>
 </div>

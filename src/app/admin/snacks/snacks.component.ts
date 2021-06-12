@@ -23,6 +23,8 @@ export class SnacksComponent implements OnInit {
 
   maxPrice:number;
 
+  p:number=1;
+
   constructor(private snacksService:SnacksService, private router: Router) { }
 
   ngOnInit(): void {
