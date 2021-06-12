@@ -1,5 +1,5 @@
 <div class="row">
-    <div *ngIf='!hideNavbar' class="navbar col-2 shadow-lg">
+    <div @slideleft *ngIf='!hideNavbar' class="navbar col-2 shadow-lg">
         <div class="d-flex flex-column justify-content-center align-items-center w-100 h-100">
             <div class="navigation">
                 <img src="../../assets/Images/logo-removebg-preview.png" width="150px" alt="">
@@ -26,7 +26,7 @@
             </div>
         </div>
     </div>
-    <div *ngIf='!hideNavbar' class="col-10">
+    <div @slideright *ngIf='!hideNavbar' class="col-10">
         <router-outlet></router-outlet>
     </div>
     <div *ngIf='hideNavbar' class="col-12">

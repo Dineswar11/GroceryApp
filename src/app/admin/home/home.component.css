@@ -2,3 +2,7 @@ a{
     text-decoration: none;
     color: black;
 }
+
+.card{
+    background-color: hsl(76, 66%, 59%);
+}

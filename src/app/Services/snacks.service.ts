@@ -25,4 +25,8 @@ export class SnacksService {
   delete(id){
     return this.HttpClient.delete("http://localhost:3000/snacks/"+id)
   }
+
+  createNewSnacksProduct(newProduct){
+    return this.HttpClient.post("http://localhost:3000/snacks",newProduct)
+  }
 }

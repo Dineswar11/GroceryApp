@@ -1,43 +1,43 @@
 <div class="container mt-5 mb-5">
     <h3 *ngIf='category == 2'>Snacks</h3>
     <h3 *ngIf='category == 1'>Fruits & Vegetables</h3>
-    <form #ref='ngForm' (ngSubmit)="addNewSnacksProduct()" *ngIf='category == 2' class="row g-3 mt-3">
+    <form #ref='ngForm' (ngSubmit)="addnewSnacksData()" *ngIf='category == 2' class="row g-3 mt-3">
         <div class="col-md-6">
             <label for="ProductName" class="form-label">Product Name</label>
-            <input type="text" name="name" class="form-control" id="ProductName" placeholder="Product Name" [(ngModel)]='newSnacksProduct.name'>
+            <input type="text" name="name" class="form-control" id="ProductName" placeholder="Product Name" [(ngModel)]='newSnacksData.name'>
         </div>
         <div class="col-12">
             <label for="Image1" class="form-label">Image-1</label>
-            <input type="text" name="Image1" class="form-control" id="Image1" placeholder="Image1 url" [(ngModel)]='newSnacksProduct.images[0].file.url'>
+            <input type="text" name="Image1" class="form-control" id="Image1" placeholder="Image1 url" [(ngModel)]='newSnacksData.url'>
         </div>
         <div class="col-12">
             <label for="Image2" class="form-label">Image-2</label>
-            <input type="text" name="Image2" class="form-control" id="Image2" placeholder="Image2 url" [(ngModel)]='newSnacksProduct.images[1].file.url'>
+            <input type="text" name="Image2" class="form-control" id="Image2" placeholder="Image2 url" [(ngModel)]='newSnacksData.url1'>
         </div>
         <div>
             <h5>Pricing</h5>
             <div class="row">
                 <div class="col-md-6">
                     <label for="Mrp" class="form-label">Mrp</label>
-                    <input type="number" class="form-control" name="price" id="Mrp" [(ngModel)]='newSnacksProduct.price'>
+                    <input type="number" class="form-control" name="price" id="Mrp" [(ngModel)]='newSnacksData.price'>
                 </div>
                 <div class="col-md-6">
                     <label for="saleprice" class="form-label">Sale Price</label>
-                    <input type="number" class="form-control" name="sale_price" id="saleprice" [(ngModel)]='newSnacksProduct.sale_price'>
+                    <input type="number" class="form-control" name="sale_price" id="saleprice" [(ngModel)]='newSnacksData.sale_price'>
                 </div>
             </div>
         </div>
         <div class="col-12">
             <h5>Description</h5>
             <div class="form-floating">
-                <textarea class="form-control" id="floatingTextarea" [(ngModel)]='newSnacksProduct.description'></textarea>
+                <textarea class="form-control" name="description" id="floatingTextarea" [(ngModel)]='newSnacksData.description'></textarea>
                 <label for="floatingTextarea">About the Item</label>
             </div>
         </div>
         <div class="col-12">
             <h5>Attributes</h5>
             <div class="form-floating">
-                <textarea class="form-control" id="floatingTextarea" [(ngModel)]='newSnacksProduct.attributes.ingredients'></textarea>
+                <textarea class="form-control" name="ingredients" id="floatingTextarea" [(ngModel)]='newSnacksData.ingredients'></textarea>
                 <label for="floatingTextarea">Ingredients</label>
             </div>
         </div>
@@ -48,44 +48,44 @@
     <form #ref='ngForm' (ngSubmit)="addNewFruitsProduct()" *ngIf='category == 1' class="row g-3 mt-3">
         <div class="col-md-6">
             <label for="ProductName" class="form-label">Product Name</label>
-            <input type="email" class="form-control" id="ProductName" placeholder="Product Name">
+            <input type="text" name="name" class="form-control" id="ProductName" placeholder="Product Name" [(ngModel)]='newFruitsData.name'>
         </div>
         <div class="col-12">
             <label for="Image1" class="form-label">Image-1</label>
-            <input type="text" class="form-control" id="Image1" placeholder="Image1 url">
+            <input type="text" name="Image1" class="form-control" id="Image1" placeholder="Image1 url" [(ngModel)]='newFruitsData.url'>
         </div>
         <div class="col-12">
             <label for="Image2" class="form-label">Image-2</label>
-            <input type="text" class="form-control" id="Image2" placeholder="Image2 url">
+            <input type="text" name="Image2" class="form-control" id="Image2" placeholder="Image2 url" [(ngModel)]='newFruitsData.url1'>
         </div>
         <div>
             <h5>Pricing</h5>
             <div class="row">
                 <div class="col-md-6">
                     <label for="Mrp" class="form-label">Mrp</label>
-                    <input type="number" class="form-control" id="Mrp">
+                    <input type="number" class="form-control" name="price" id="Mrp" [(ngModel)]='newFruitsData.price'>
                 </div>
                 <div class="col-md-6">
                     <label for="saleprice" class="form-label">Sale Price</label>
-                    <input type="number" class="form-control" id="saleprice">
+                    <input type="number" class="form-control" name="sale_price" id="saleprice" [(ngModel)]='newFruitsData.sale_price'>
                 </div>
             </div>
         </div>
         <div class="col-12">
             <h5>Description</h5>
             <div class="form-floating">
-                <textarea class="form-control" id="floatingTextarea"></textarea>
+                <textarea class="form-control" name="description" id="floatingTextarea" [(ngModel)]='newFruitsData.description'></textarea>
                 <label for="floatingTextarea">Comments</label>
             </div>
         </div>
         <div class="col-12">
             <h5>Attributes</h5>
             <div class="form-floating">
-                <textarea class="form-control" id="floatingTextarea"></textarea>
+                <textarea class="form-control" name="benifits" id="floatingTextarea" [(ngModel)]='newFruitsData.benifits'></textarea>
                 <label for="floatingTextarea">Benefits</label>
             </div>
             <div class="form-floating mt-3">
-                <textarea class="form-control" id="floatingTextarea"></textarea>
+                <textarea class="form-control" name="storage_uses" id="floatingTextarea" [(ngModel)]='newFruitsData.storage_uses'></textarea>
                 <label for="floatingTextarea">Storage & Usage</label>
             </div>
         </div>

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AddtocartService } from './Services/addtocart.service';
+import { LoginsatusService } from './Services/loginsatus.service';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,7 @@ import { AddtocartService } from './Services/addtocart.service';
 export class AppComponent{
   title = 'GroceryApp';
 
-  constructor(private CartDS:AddtocartService){}
+  constructor(private CartDS:AddtocartService,public LoginDS:LoginsatusService){}
 
   numberOfProductsAdded:number=0;
 
