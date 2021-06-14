@@ -29,7 +29,6 @@ a {
     .card {
         margin-top: 10%;
         margin-bottom: 10%;
-        background-color: hsl(190, 80%, 88%);
     }
     .flex-row{
         flex-direction: column-reverse!important;
