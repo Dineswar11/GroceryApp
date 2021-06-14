@@ -28,6 +28,7 @@ export class CartComponent implements OnInit {
   }
 
   totalPrice(){
+    this.sum=0;
     for(let products of this.productsAddedToCart){
       this.sum=this.sum+(products.sale_price)*(products.quantity)
     }

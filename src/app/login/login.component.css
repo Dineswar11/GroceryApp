@@ -24,7 +24,6 @@ a {
     .card {
         margin-top: 10%;
         margin-bottom: 10%;
-        background-color: hsl(190, 80%, 88%);
     }
     .body{
         background-image: linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.8)), url(../../assets/Images/login-bg.jpg);
