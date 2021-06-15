@@ -11,7 +11,7 @@ export class AddtocartService {
 
   newProductAddedToCart(newProduct) {
     if (this.productsAddedToCart.length >= 1) {
-      let ind = this.productsAddedToCart.findIndex(userObj => userObj.id === newProduct.id)
+      let ind = this.productsAddedToCart.findIndex(userObj => userObj.name === newProduct.name)
       if (ind == -1) {
         this.productsAddedToCart.push(newProduct)
         return true
