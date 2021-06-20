@@ -73,7 +73,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          Total Price - {{sum}} <br>
+          Total Price - {{sum | currency:'INR'}} <br>
           Number Of Items - {{productsAddedToCart.length}}
         </div>
         <div class="modal-footer">
