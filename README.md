@@ -14,6 +14,11 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
+## Modules Used
+[Ngx-Pagination](https://www.npmjs.com/package/ngx-pagination) for pages.
+[Ngx-toastr](https://www.npmjs.com/package/ngx-toastr) for in app notifications.
+[T-writer.js](https://www.npmjs.com/package/t-writer.js) for typewriter effect.
+
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
