@@ -31,7 +31,7 @@ export class FruitsVegitablesComponent implements OnInit,OnDestroy {
   ngOnInit(): void {
     this.subscription = this.frObj.getFruitsAndVegitables().subscribe(
       products=>{
-        this.fruitsVegetablesData=products;
+        this.fruitsVegetablesData=products['message'];
       },  
       err=>{
         console.log("error is",err)

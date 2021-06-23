@@ -15,8 +15,7 @@ export class UsersComponent implements OnInit {
   ngOnInit(): void {
     this.UserDS.getUserDetails().subscribe(
       res => {
-        this.users = res;
-        console.log(this.users)
+        this.users = res['message'];
       },
       err => {
         console.log('err in getting user data is', err)

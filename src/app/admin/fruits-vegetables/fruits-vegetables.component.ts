@@ -30,7 +30,7 @@ export class FruitsVegetablesComponent implements OnInit {
   ngOnInit(): void {
     this.subscription = this.frObj.getFruitsAndVegitables().subscribe(
       products => {
-        this.fruitsVegetablesData = products;
+        this.fruitsVegetablesData = products['message'];
       },
       err => {
         console.log("error is", err)
