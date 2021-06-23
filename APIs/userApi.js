@@ -8,32 +8,12 @@ const checkToken = require("./Middlewares/checkToken")
 //add body parsing middleware
 userApi.use(exp.json())
 
-//import MongoCLient
-const mc = require("mongodb").MongoClient;
-
-
-//connection string
-const databaseUrl = 'mongodb+srv://testdb1:testdb1@test1.wuccf.mongodb.net/Df?retryWrites=true&w=majority';
-
 let userCollectionObj;
 
-//connect to DB
-mc.connect(databaseUrl, { useNewUrlParser: true, useUnifiedTopology: true }, (err, client) => {
-
-    if (err) {
-        console.log("err in db connection", err);
-    }
-    else {
-        //get database object
-        let databaseObj = client.db("Df")
-        //create usercollection object
-
-        userCollectionObj = databaseObj.collection("usercollection")
-        console.log("connected to user Collection")
-
-    }
+userApi.use((req,res,next)=>{
+    userCollectionObj = req.app.get("userCollectionObj")
+    next()
 })
-
 //http://localhost:3000/user/getusers
 //get users
 userApi.get("/getusers", expressErrorHandler(async (req, res) => {

@@ -5,26 +5,12 @@ let ErrorHandler = require('express-async-handler')
 
 snacksApi.use(exp.json())
 
-//export mongodb
-const mc = require('mongodb').MongoClient;
+let snacksCollectionObj
 
-let databaseUrl = 'mongodb+srv://testdb1:testdb1@test1.wuccf.mongodb.net/Df?retryWrites=true&w=majority';
-
-let snacksCollectionObj;
-
-//connect to db
-mc.connect(databaseUrl, { useNewUrlParser: true, useUnifiedTopology: true }, (err, client) => {
-    if (err) {
-        console.log('err in connecting database', err)
-    }
-    else {
-        let databaseObj = client.db('Df');
-
-        snacksCollectionObj = databaseObj.collection('snacksCollection')
-        console.log('connected to snacks collection')
-    }
+snacksApi.use((req,res,next)=>{
+    snacksCollectionObj = req.app.get("snacksCollectionObj")
+    next()
 })
-
 //GET
 //http://localhost:3000/snacks/getsnacks
 snacksApi.get('/getsnacks',ErrorHandler( async (req, res) => {
