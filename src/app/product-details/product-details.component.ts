@@ -28,7 +28,7 @@ export class ProductDetailsComponent implements OnInit {
       this.category = 'snacks'
       this.SnacksDataService.getSnacksDataWithId(id).subscribe(
         res => {
-          this.productData=res;
+          this.productData=res['message'];
         },
         err => {
           console.log('err in getting specific snacks data is', err)
@@ -39,7 +39,7 @@ export class ProductDetailsComponent implements OnInit {
       this.category = 'fruits'
       this.Fruits_Vegetables.getSpecificFruitsAndVegitablesData(id).subscribe(
         res=>{
-          this.productData=res;
+          this.productData=res['message'];
         },
         err=>{
           console.log('err in getting specific fruits and vegetables data is', err)

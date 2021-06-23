@@ -12,23 +12,23 @@ export class FruitsVegitablesService {
   constructor(private hc:HttpClient) { }
 
   getFruitsAndVegitables():Observable<fruitsvegitablesArr[]>{
-    return this.hc.get<fruitsvegitablesArr[]>('http://localhost:3000/fruits_vegitables')
+    return this.hc.get<fruitsvegitablesArr[]>('http://localhost:3000/fruits/getfruits')
   }
   
   getSpecificFruitsAndVegitablesData(id):Observable<fruitsvegitablesArr>{
-    return this.hc.get<fruitsvegitablesArr>('http://localhost:3000/fruits_vegitables/'+id)
+    return this.hc.get<fruitsvegitablesArr>('http://localhost:3000/fruits/getfruits/'+id)
   }
 
   updateFruitsdetails(Product):Observable<any>{
-    return this.hc.put("http://localhost:3000/fruits_vegitables/"+Product.id,Product)
+    return this.hc.put("http://localhost:3000/fruits/updatefruits/"+Product.id,Product)
   }
 
   delete(id){
-    return this.hc.delete("http://localhost:3000/fruits_vegitables/"+id)
+    return this.hc.delete("http://localhost:3000/fruits/deletefruits/"+id)
   }
 
   createNewFruitsProduct(newProduct){
-    return this.hc.post("http://localhost:3000/fruits_vegitables",newProduct)
+    return this.hc.post("http://localhost:3000/fruits/createfruits",newProduct)
   }
 
 }

@@ -29,7 +29,7 @@ export class SnacksComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.subscription = this.snacksService.getSnackData().subscribe(
       res=>{
-        this.snacksData=res;
+        this.snacksData=res['message'];
       },
       err=>{
         console.log('err in getting snacks data is',err)
