@@ -6,27 +6,11 @@ let ErrorHandler = require('express-async-handler')
 //middleware to convert to json
 fruitsApi.use(exp.json())
 
-//export mongodb
-const mc = require('mongodb').MongoClient;
-
-//database Url
-const databaseUrl = 'mongodb+srv://testdb1:testdb1@test1.wuccf.mongodb.net/Df?retryWrites=true&w=majority';
-
 let fruitsCollectionObj;
 
-//connect to db
-mc.connect(databaseUrl, { useNewUrlParser: true, useUnifiedTopology: true }, (err, client) => {
-
-    if (err) {
-        console.log('err in connecting db', err.message)
-    }
-    else {
-        //get database object
-        let databaseObj = client.db("Df")
-        //create usercollection object
-        fruitsCollectionObj = databaseObj.collection("fruitsCollection")
-        console.log("connected to fruits collection")
-    }
+fruitsApi.use((req,res,next)=>{
+    fruitsCollectionObj = req.app.get("fruitsCollectionObj")
+    next()
 })
 
 //GET

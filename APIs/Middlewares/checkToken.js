@@ -12,7 +12,7 @@ const checkToken = (req, res, next) => {
         token = tokenWithBearer.split(" ")[1];
         jwt.verify(token,'xyz',(err,decoded)=>{
             if(err){
-                return res.send({message:"Invalid/Expired Request .. Login Again to continue"})
+                return res.send({message:"Invalid/Expired Request.. Login Again to continue"})
             }
             else{
                 next()

@@ -14,6 +14,6 @@ export class NewslettersubscriptionService {
   }
 
   getUserDetails():Observable<any[]>{
-    return this.HttpClient.get<any[]>('http://localhost:3000/users')
+    return this.HttpClient.get<any[]>('http://localhost:3000/user/getusers')
   }
 }

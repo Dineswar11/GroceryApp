@@ -15,6 +15,34 @@ app.use("/snacks", snacksApi)
 app.use("/fruits", fruitsApi)
 app.use('/user',userApi)
 
+//export mongodb
+const mc = require('mongodb').MongoClient;
+
+//database Url
+const databaseUrl = 'mongodb+srv://testdb1:testdb1@test1.wuccf.mongodb.net/Df?retryWrites=true&w=majority';
+
+let fruitsCollectionObj;
+
+//connect to db
+mc.connect(databaseUrl, { useNewUrlParser: true, useUnifiedTopology: true }, (err, client) => {
+
+    if (err) {
+        console.log('err in connecting db', err.message)
+    }
+    else {
+        //get database object
+        let databaseObj = client.db("Df")
+        //create collection objects
+        fruitsCollectionObj = databaseObj.collection("fruitsCollection")
+        snacksCollectionObj = databaseObj.collection('snacksCollection')
+        userCollectionObj = databaseObj.collection("usercollection")
+        app.set("fruitsCollectionObj",fruitsCollectionObj)
+        app.set("snacksCollectionObj",snacksCollectionObj)
+        app.set("userCollectionObj",userCollectionObj)
+        console.log("connected to database")
+    }
+})
+
 //invalid path
 app.use((req, res, next) => {
 

@@ -11,7 +11,7 @@ import { UsersComponent } from './users/users.component';
 const routes: Routes = [
   {path:'',component:AdminComponent,children:[
     {path:'home',component:HomeComponent},
-    {path:'users',component:UsersComponent},
+    {path:'showusers',component:UsersComponent},
     {path:'snacks',component:SnacksComponent},
     {path:'snacks/:id',component:EditproductsComponent},
     {path:'snacks_newproduct',component:NewproductComponent},
