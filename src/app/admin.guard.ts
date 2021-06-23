@@ -10,12 +10,12 @@ export class AdminGuard implements CanActivate {
   constructor(private router:Router){}
 
   canActivate():boolean{
-    if(localStorage.getItem("username")==null){
-      this.router.navigateByUrl("notfound")
-      return false;
+    if(localStorage.getItem("username")=== 'Admin'){
+      return true;
     }
     else{
-      return true;
+      this.router.navigateByUrl("notfound")
+      return false;
     }
   }
   
