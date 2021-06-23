@@ -19,6 +19,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { SharedModule } from './shared/shared.module';
+import { UserprofileComponent } from './userprofile/userprofile.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { SharedModule } from './shared/shared.module';
     PagenotfoundComponent,
     LoginComponent,
     RegisterComponent,
+    UserprofileComponent,
   ],
   imports: [
     BrowserModule,

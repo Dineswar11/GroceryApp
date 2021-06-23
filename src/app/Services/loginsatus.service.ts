@@ -7,12 +7,15 @@ export class LoginsatusService {
 
   constructor() { }
 
-  loginStatus():boolean{
+  loginStatus():number{
     if(localStorage.getItem("username")==null){
-      return false;
+      return 0;
+    }
+    else if(localStorage.getItem('username')==='Admin'){
+      return 1;
     }
     else{
-      return true;
+      return 2
     }
   }
 

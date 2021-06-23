@@ -9,6 +9,7 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { RegisterComponent } from './register/register.component';
 import { SnacksComponent } from './snacks/snacks.component';
+import { UserprofileComponent } from './userprofile/userprofile.component';
 
 const routes: Routes = [
   {path:'cart',component:CartComponent},
@@ -20,6 +21,7 @@ const routes: Routes = [
   {path:'snacks/:id',component:ProductDetailsComponent},
   {path:'login',component:LoginComponent},
   {path:'register',component:RegisterComponent},
+  {path:'userprofile/:username',component:UserprofileComponent},
   {path:'',redirectTo:'home',pathMatch:'full'},
   { path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule),canActivate:[AdminGuard] },
   {path:'**',component:PagenotfoundComponent}
