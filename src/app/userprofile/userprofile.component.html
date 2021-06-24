@@ -1,1 +1,17 @@
-<p>userprofile works!</p>
+<div class="ms-auto me-auto">
+    <div class="head-pic w-100">
+        <img src={{UserDetails?.headerPic}} height="300px" width="100%" alt="">
+    </div>
+    <div class="profile-pic-container">
+        <img class="profile-pic" width="250px" height="250px" src={{UserDetails?.profilePic}} alt="">
+        <div class="middle">
+            <div class="text">{{UserDetails?.username}}</div>
+        </div>
+    </div>
+
+    <div class="details">
+        <h2 class="display-5 text-white ms-1"> {{UserDetails?.username}} </h2>
+        <p class="text-muted ms-2">Hover over profile picture to get the Username</p>
+        <p class="text-white">Email :{{UserDetails?.email}}</p>
+    </div>
+</div>        

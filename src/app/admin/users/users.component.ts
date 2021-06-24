@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NewslettersubscriptionService } from 'src/app/Services/newslettersubscription.service';
+import { UserService } from 'src/app/Services/user.service';
 
 @Component({
   selector: 'app-users',
@@ -10,7 +11,7 @@ export class UsersComponent implements OnInit {
 
   users: any[] = [];
 
-  constructor(private UserDS: NewslettersubscriptionService) { }
+  constructor(private UserDS: UserService) { }
 
   ngOnInit(): void {
     this.UserDS.getUserDetails().subscribe(

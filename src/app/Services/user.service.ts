@@ -16,4 +16,12 @@ export class UserService {
   login(userDetails):Observable<any>{
     return this.Httpclient.post('http://localhost:3000/user/loginDetails',userDetails)
   }
+
+  getUserDetails():Observable<any[]>{
+    return this.Httpclient.get<any[]>('http://localhost:3000/user/getusers')
+  }
+
+  getUserDetailsByName(username):Observable<any>{
+    return this.Httpclient.get<any>('http://localhost:3000/user/getuser/'+username)
+  }
 }

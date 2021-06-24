@@ -13,7 +13,7 @@ import { UserService } from '../Services/user.service';
 })
 export class RegisterComponent implements OnInit {
 
-  registerDetails = new registerclass('', '', '', '')
+  registerDetails = new registerclass('', '', '', '','https://res.cloudinary.com/dfkhzf4sw/image/upload/v1624444362/NicePng_gray-circle-png_1366211_kf1mxw.png','https://res.cloudinary.com/dfkhzf4sw/image/upload/v1624444346/DefaultHeader_wamkxs.jpg')
 
   showPassword: boolean = true;
 
@@ -26,7 +26,9 @@ export class RegisterComponent implements OnInit {
     let newUserDetails = {
       username: this.registerDetails.username,
       email: this.registerDetails.email,
-      password: this.registerDetails.password
+      password: this.registerDetails.password,
+      profilePic : this.registerDetails.profilePic,
+      headerPic : this.registerDetails.headerPic
     }
     this.userService.register(newUserDetails).subscribe(
       res => {
