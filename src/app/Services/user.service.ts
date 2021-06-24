@@ -24,4 +24,8 @@ export class UserService {
   getUserDetailsByName(username):Observable<any>{
     return this.Httpclient.get<any>('http://localhost:3000/user/getuser/'+username)
   }
+
+  updateProfilePic(updateduserDetails){
+    return this.Httpclient.put('http://localhost:3000/user/updateuserprofilepic/'+updateduserDetails.username,updateduserDetails)
+  }
 }

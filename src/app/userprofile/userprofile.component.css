@@ -1,7 +1,11 @@
+.body{
+  position: relative;
+}
+
 .profile-pic-container{
     position: absolute;
     top: 30%;
-    left: 65%;
+    right: 5%;
 }
 
 .profile-pic{

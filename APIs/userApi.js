@@ -5,12 +5,34 @@ const expressErrorHandler = require("express-async-handler")
 const bcryptjs = require("bcryptjs")
 const jwt = require("jsonwebtoken")
 const checkToken = require("./Middlewares/checkToken")
+
+const cloudinary = require('cloudinary').v2;
+const multer = require('multer')
+const { CloudinaryStorage } = require('multer-storage-cloudinary')
 //add body parsing middleware
 userApi.use(exp.json())
 
+cloudinary.config({
+    cloud_name: 'dfkhzf4sw',
+    api_key: '761945137384723',
+    api_secret: 'a9OI3LWk50T0PJNsMpXroMWW2Uw'
+})
+
+const clStorage = new CloudinaryStorage({
+    cloudinary: cloudinary,
+    params: async (req, file) => {
+        return {
+            folder: 'GroceryApp',
+            public_id: file.filename + '-' + Date.now()
+        }
+    }
+})
+
+const multerObj = multer({ storage: clStorage })
+
 let userCollectionObj;
 
-userApi.use((req,res,next)=>{
+userApi.use((req, res, next) => {
     userCollectionObj = req.app.get("userCollectionObj")
     next()
 })
@@ -63,9 +85,9 @@ userApi.post("/createuser", expressErrorHandler(async (req, res) => {
     }
 }))
 
-//http://localhost:3000/user/updateuser/<username>
+//http://localhost:3000/user/updateuserdetails/<username>
 //PUT
-userApi.put("/updateuser/:username", expressErrorHandler(async (req, res) => {
+userApi.put("/updateuserdetails/:username", expressErrorHandler(async (req, res) => {
 
     //get modified user
     let modifiedUser = req.body;
@@ -78,6 +100,17 @@ userApi.put("/updateuser/:username", expressErrorHandler(async (req, res) => {
     //send res
     res.send({ message: "User modified" })
 
+}))
+
+//http://localhost:3000/user/updateuserprofilepic/<username>
+userApi.put('/updateuserprofilepic/:username', multerObj.single('profilePic'), expressErrorHandler(async (req, res) => {
+    //get modified user
+    let modifiedUser = JSON.parse(req.body.userDetails);
+    //update
+    // modifiedUser.profilePic = req.file.path;
+    await userCollectionObj.updateOne({ username: modifiedUser.username }, { $set: { profilePic: req.file.path } })
+    //send res
+    res.send({ message: "User modified" })
 }))
 
 //http://localhost:3000/user/deleteuser/:username
@@ -126,11 +159,11 @@ userApi.post('/loginDetails', expressErrorHandler(async (req, res) => {
 
     }
 
-//GET
-//http://localhost:3000/user/primesub
-userApi.get('/primesub',checkToken,(req,res)=>{
-    res.send({message:'Prime Sub Authentication'})
-})   
+    //GET
+    //http://localhost:3000/user/primesub
+    userApi.get('/primesub', checkToken, (req, res) => {
+        res.send({ message: 'Prime Sub Authentication' })
+    })
 
 }))
 

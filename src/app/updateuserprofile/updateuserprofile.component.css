@@ -1,0 +1,10 @@
+.row,.col-10,.col-2{
+    padding: 0px;
+    margin: 0px;
+}
+
+.profile-pic{
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
