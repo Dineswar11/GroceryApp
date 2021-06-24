@@ -1,17 +1,43 @@
-<div class="ms-auto me-auto">
+<div class="body ms-auto me-auto">
     <div class="head-pic w-100">
         <img src={{UserDetails?.headerPic}} height="300px" width="100%" alt="">
     </div>
     <div class="profile-pic-container">
         <img class="profile-pic" width="250px" height="250px" src={{UserDetails?.profilePic}} alt="">
         <div class="middle">
-            <div class="text">{{UserDetails?.username}}</div>
+            <button class="text btn" data-bs-toggle="modal" data-bs-target="#updateProfilePic"><i
+                    class="fas fa-user-edit"></i></button>
         </div>
     </div>
+    <div class="modal fade" id="updateProfilePic">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form #ref="ngForm" (ngSubmit)="updateProfilePic(ref.value)">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Update Profile Pic</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
 
-    <div class="details">
-        <h2 class="display-5 text-white ms-1"> {{UserDetails?.username}} </h2>
-        <p class="text-muted ms-2">Hover over profile picture to get the Username</p>
-        <p class="text-white">Email :{{UserDetails?.email}}</p>
+                        <div class="mb-3">
+                            <label for="formFileSm" class="form-label">Upload Profile Picture</label>
+                            <div class="text-muted">Preferably square images</div>
+                            <input class="form-control form-control-sm mt-2" name=profilePic id="formFileSm"
+                                (change)='selectFile($event)' ngModel type="file">
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Save changes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
-</div>        
+    <div class="details">
+        <h2 class="display-5 text-white ms-4"> {{UserDetails?.username}} </h2>
+        <p class="text-white ms-4">Email :{{UserDetails?.email}}</p>
+        <a class="btn btn-primary ms-4" routerLink='/updateuserprofile'><i class="fas fa-user-edit"></i></a>
+    </div>
+</div>
