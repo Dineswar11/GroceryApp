@@ -2,13 +2,14 @@
 const exp = require('express');
 const fruitsApi = exp.Router();
 let ErrorHandler = require('express-async-handler')
+const convertToObjectId = require('./Middlewares/ObjectID')
 
 //middleware to convert to json
 fruitsApi.use(exp.json())
 
 let fruitsCollectionObj;
 
-fruitsApi.use((req,res,next)=>{
+fruitsApi.use((req, res, next) => {
     fruitsCollectionObj = req.app.get("fruitsCollectionObj")
     next()
 })
@@ -51,7 +52,7 @@ fruitsApi.post('/createfruits', ErrorHandler(async (req, res) => {
 
 //PUT
 //http://localhost:3000/fruits/updatefruits/:id
-fruitsApi.put('/updatefruits/:id', ErrorHandler(async (req, res) => {
+fruitsApi.put('/updatefruits/:id', convertToObjectId, ErrorHandler(async (req, res) => {
 
     let modifiedData = req.body;
 

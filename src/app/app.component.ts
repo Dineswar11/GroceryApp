@@ -22,6 +22,7 @@ export class AppComponent{
   }
 
   navigate(){
-    this.Router.navigateByUrl('/userprofile/'+this.username)
+    // this.Router.navigateByUrl('/userprofile/'+this.username)
+    this.Router.navigateByUrl('/user')
   }
 }

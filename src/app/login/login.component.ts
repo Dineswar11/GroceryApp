@@ -25,13 +25,14 @@ export class LoginComponent implements OnInit {
     this.UserService.login(this.userDetails).subscribe(
       res=>{
         if(res.message==='login success'){
+          console.log(res.username)
           localStorage.setItem("token",res.token)
           localStorage.setItem('username',res.username)
           localStorage.setItem("userObj",JSON.stringify(res.userObj))
-          if(res.username === 'Admin'){
+          if(localStorage.getItem('username') === 'Admin'){
             this.router.navigateByUrl('/admin')
           }
-          this.router.navigateByUrl('userprofile/'+res.username)
+          else this.router.navigateByUrl('/user')
         }
         else alert(res.message)
       },
