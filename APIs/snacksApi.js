@@ -2,18 +2,19 @@
 const exp = require('express')
 const snacksApi = exp.Router();
 let ErrorHandler = require('express-async-handler')
+const convertToObjectId = require('./Middlewares/ObjectID')
 
 snacksApi.use(exp.json())
 
 let snacksCollectionObj
 
-snacksApi.use((req,res,next)=>{
+snacksApi.use((req, res, next) => {
     snacksCollectionObj = req.app.get("snacksCollectionObj")
     next()
 })
 //GET
 //http://localhost:3000/snacks/getsnacks
-snacksApi.get('/getsnacks',ErrorHandler( async (req, res) => {
+snacksApi.get('/getsnacks', ErrorHandler(async (req, res) => {
 
     let snacksList = await snacksCollectionObj.find().toArray()
     res.send({ message: snacksList })
@@ -21,14 +22,14 @@ snacksApi.get('/getsnacks',ErrorHandler( async (req, res) => {
 
 //GET
 //http://localhost:3000/snacks/getsnacks/:id
-snacksApi.get('/getsnacks/:id',ErrorHandler( async (req, res) => {
+snacksApi.get('/getsnacks/:id', ErrorHandler(async (req, res) => {
 
     //get id
     let ID = req.params.id
 
     let snackObj = await snacksCollectionObj.findOne({ id: ID })
-    if(snackObj === null){
-        res.send({message:`obj with ID ${ID} does not exist`})
+    if (snackObj === null) {
+        res.send({ message: `obj with ID ${ID} does not exist` })
     }
     else res.send({ message: snackObj })
 }))
@@ -36,7 +37,7 @@ snacksApi.get('/getsnacks/:id',ErrorHandler( async (req, res) => {
 
 //POST
 //http://localhost:3000/snacks/createsnacks
-snacksApi.post('/createsnacks',ErrorHandler( async (req, res) => {
+snacksApi.post('/createsnacks', ErrorHandler(async (req, res) => {
 
     let newSnacksData = req.body;
 
@@ -51,7 +52,7 @@ snacksApi.post('/createsnacks',ErrorHandler( async (req, res) => {
 
 //PUT
 //http://localhost:3000/snacks/updateSnacks/:id
-snacksApi.put('/updateSnacks/:id',ErrorHandler( async (req, res) => {
+snacksApi.put('/updateSnacks/:id', convertToObjectId, ErrorHandler(async (req, res) => {
 
     let updatedSnacksData = req.body;
 
@@ -61,12 +62,12 @@ snacksApi.put('/updateSnacks/:id',ErrorHandler( async (req, res) => {
 
 //DELETE
 //http://localhost:3000/snacks/deletesnacks/:id
-snacksApi.delete('/deletesnacks/:id',ErrorHandler( async (req, res) => {
+snacksApi.delete('/deletesnacks/:id', ErrorHandler(async (req, res) => {
 
     let ID = req.params.id;
 
     await snacksCollectionObj.deleteOne({ id: ID })
-    res.send({message:`obj with ID: ${ID} deleted`})
+    res.send({ message: `obj with ID: ${ID} deleted` })
 }))
 
 //export snacksApi

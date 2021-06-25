@@ -19,6 +19,7 @@ export class SnacksService {
   }
 
   updateSnacksdetails(Product):Observable<any>{
+    console.log(Product)
     return this.HttpClient.put("http://localhost:3000/snacks/updateSnacks/"+Product.id,Product)
   }
 
