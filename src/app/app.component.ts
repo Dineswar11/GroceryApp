@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AddtocartService } from './Services/addtocart.service';
 import { LoginsatusService } from './Services/loginsatus.service';
@@ -8,7 +8,7 @@ import { LoginsatusService } from './Services/loginsatus.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent{
+export class AppComponent implements OnInit{
   title = 'GroceryApp';
 
   constructor(private CartDS:AddtocartService,public LoginDS:LoginsatusService,private Router:Router){}
@@ -16,6 +16,10 @@ export class AppComponent{
   numberOfProductsAdded:number=0;
 
   username = localStorage.getItem("username")
+
+  ngOnInit(){
+    
+  }
 
   numberOfProducts(){
     this.numberOfProductsAdded = this.CartDS.getNumberofProductsInCart()
