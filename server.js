@@ -2,6 +2,7 @@
 const exp = require('express');
 const app = exp();
 const path = require('path')
+require('dotenv').config()
 
 app.use(exp.static(path.join(__dirname,'./dist/GroceryApp/')))
 
@@ -19,7 +20,7 @@ app.use('/user',userApi)
 const mc = require('mongodb').MongoClient;
 
 //database Url
-const databaseUrl = 'mongodb+srv://testdb1:testdb1@test1.wuccf.mongodb.net/Df?retryWrites=true&w=majority';
+const databaseUrl = process.env.DATABASE_URL;
 
 let fruitsCollectionObj;
 
@@ -56,5 +57,5 @@ app.use((err, req, res, next) => {
 
 
 //assign port
-const port = 3000;
+const port = process.env.PORT;
 app.listen(port, () => console.log(`server on ${port}...`))
