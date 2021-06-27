@@ -24,12 +24,18 @@
                             <div class="text-muted">Preferably square images</div>
                             <input class="form-control form-control-sm mt-2" name=profilePic id="formFileSm"
                                 (change)='selectFile($event)' ngModel type="file">
+                            <div class="d-flex justify-content-center">
+                                <img [src]='url' class="profile-pic" *ngIf='showImage' height="250px" width="250px" alt="">
+                            </div>    
+                            <div class="text-muted" *ngIf='fileSizegt1MB'>Image size should be less than 1MB</div>
                         </div>
 
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Save changes</button>
+                        <button type="submit" *ngIf='!fileSizegt1MB' class="btn btn-primary">Save changes</button>
+                        <button type="submit" *ngIf='fileSizegt1MB' class="btn btn-primary" disabled>Save
+                            changes</button>
                     </div>
                 </form>
             </div>
