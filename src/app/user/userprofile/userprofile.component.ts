@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 import { UserService } from 'src/app/Services/user.service';
 
 @Component({
@@ -8,11 +9,17 @@ import { UserService } from 'src/app/Services/user.service';
 })
 export class UserprofileComponent implements OnInit {
 
-  constructor(private UserService:UserService) { }
+  constructor(private UserService:UserService,private sanitizer:DomSanitizer) { }
 
   UserDetails;
 
   file:File;
+
+  fileSizegt1MB:boolean;
+
+  url;
+
+  showImage:boolean=false;
 
   ngOnInit(): void {
     let username = localStorage.getItem('username')
@@ -28,6 +35,12 @@ export class UserprofileComponent implements OnInit {
 
   selectFile(event){
     this.file = event.target.files[0]
+    if(event.target.files[0].size < 1000000){
+      this.url = this.sanitizer.bypassSecurityTrustUrl(URL.createObjectURL(event.target.files[0]))
+      this.fileSizegt1MB = false
+      this.showImage = true
+    }
+    else this.fileSizegt1MB = true
   }
 
   updateProfilePic(ref){
@@ -42,6 +55,7 @@ export class UserprofileComponent implements OnInit {
     this.UserService.updateProfilePic(formData).subscribe(
       res=>{
         alert(res['message'])
+        this.ngOnInit()
       },
       err=>{
         console.log(err)

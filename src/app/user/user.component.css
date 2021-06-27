@@ -27,8 +27,8 @@
     width: 16rem;
 }
 
-.nav-link{
-    color:black;
+.nav-link {
+    color: black;
     margin-left: auto;
     margin-right: auto;
 }
@@ -36,22 +36,42 @@
 .link-text {
     display: none;
     margin: 0px;
-    padding: 0px;
+    padding: 5px;
     position: absolute;
     background-color: white;
     color: black;
     left: -5px;
     top: 15px;
-    transform: scale(0.1);
-    transition: transform 1000ms ease-in;
 }
 
-.last{
+svg{
+    color :hsl(181, 100%, 16%)
+}
+
+svg:hover{
+    color: hsl(0, 0%, 35%);
+    transition: color 400ms ease-in;
+}
+
+.last {
     margin-top: auto;
 }
 
-.nav-item:hover .link-text{
+.nav-item:hover .link-text {
     display: block;
     left: 50px;
-    transform: scale(1);
+    animation: scale-in-left 200ms ease-in both;
+}
+
+@keyframes scale-in-left {
+    0% {
+        transform: scale(0);
+        transform-origin: 0 50%;
+        opacity: 1
+    }
+    100% {
+        transform: scale(1);
+        transform-origin: 0 50%;
+        opacity: 1
+    }
 }
