@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { PagenotfoundComponent } from '../pagenotfound/pagenotfound.component';
 import { AdminComponent } from './admin.component';
 import { EditproductsComponent } from './editproducts/editproducts.component';
 import { FruitsVegetablesComponent } from './fruits-vegetables/fruits-vegetables.component';
@@ -18,7 +19,8 @@ const routes: Routes = [
     {path:'fruits_vegetables',component:FruitsVegetablesComponent},
     {path:'fruits_vegetables/:id',component:EditproductsComponent},
     {path:'fruits_vegetables_newproduct',component:NewproductComponent},
-    {path:'',redirectTo:'home',pathMatch:'full'}
+    {path:'',redirectTo:'home',pathMatch:'full'},
+    { path: '**', component: PagenotfoundComponent }
   ]},
   ]
 

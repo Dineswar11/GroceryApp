@@ -26,7 +26,7 @@
                 </a>
             </li>
             <li class="ms-1 nav-item">
-                <a routerLink='updateuserprofile' class="nav-link">
+                <a routerLink='payment' class="nav-link">
                     <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="wallet"
                         class="svg-inline--fa fa-wallet fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 1000 1000">
@@ -38,7 +38,7 @@
                 </a>
             </li>
             <li class="ms-1 nav-item">
-                <a href="" class="nav-link">
+                <a routerLink="orders" class="nav-link">
                     <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="shopping-cart"
                         class="svg-inline--fa fa-shopping-cart fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 1000 1000">
@@ -50,7 +50,7 @@
                 </a>
             </li>
             <li class="ms-1 nav-item last">
-                <a href="" class="nav-link">
+                <a (click)="LoginDS.logout()" routerLink='/login' class="nav-link">
                     <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="sign-out-alt"
                         class="svg-inline--fa fa-sign-out-alt fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 800 800">
