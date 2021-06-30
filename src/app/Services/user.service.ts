@@ -28,4 +28,9 @@ export class UserService {
   updateProfilePic(updateduserDetails){
     return this.Httpclient.put('http://localhost:3000/user/updateuserprofilepic/'+updateduserDetails.username,updateduserDetails)
   }
+
+  updateUserDetails(updateduserDetails){
+    console.log(updateduserDetails)
+    return this.Httpclient.put('http://localhost:3000/user/updateuserdetails/'+updateduserDetails.username,updateduserDetails)
+  }
 }

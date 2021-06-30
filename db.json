@@ -960,5 +960,31 @@
       "email": "Hola@gmail.com",
       "id": 6
     }
+  ],
+  "userDetails":[
+    {
+      "generalDetails":{
+        "firstName":"A",
+        "lastName":"B",
+        "email":"dineshwarreddy619@gmail.com",
+        "phone":"12343",
+        "birthday":""
+      },
+      "contactDetails":{
+        "instagram":"",
+        "linkedin":"",
+        "twitter":"",
+        "facebook":""
+      },
+      "shippingDetails":{
+        "name":"",
+        "pincode":123,
+        "line1":"",
+        "line2":"",
+        "landmark":"",
+        "town":"",
+        "city":""
+      }
+    }
   ]
 }

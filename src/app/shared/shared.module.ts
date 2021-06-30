@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { SearchPipe } from '../pipes/search.pipe';
 import { MinPricePipe } from '../pipes/min-price.pipe';
 import { MaxPricePipe } from '../pipes/max-price.pipe';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -10,15 +11,17 @@ import { MaxPricePipe } from '../pipes/max-price.pipe';
   declarations: [
     SearchPipe,
     MaxPricePipe,
-    MinPricePipe
+    MinPricePipe,
   ],
   exports:[
     SearchPipe,
     MaxPricePipe,
-    MinPricePipe
+    MinPricePipe,
+    FormsModule
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ]
 })
 export class SharedModule { }
