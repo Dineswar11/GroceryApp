@@ -6,6 +6,7 @@ import { UserRoutingModule } from './user-routing.module';
 import { UserComponent } from './user.component';
 import { UserprofileComponent } from './userprofile/userprofile.component';
 import { UpdateuserprofileComponent } from './updateuserprofile/updateuserprofile.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { UpdateuserprofileComponent } from './updateuserprofile/updateuserprofil
   imports: [
     CommonModule,
     UserRoutingModule,
-    FormsModule
+    FormsModule,
+    SharedModule
   ]
 })
 export class UserModule { }

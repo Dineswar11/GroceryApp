@@ -68,15 +68,17 @@ userApi.post("/createuser", expressErrorHandler(async (req, res) => {
 
 //http://localhost:3000/user/updateuserdetails/<username>
 //PUT
-userApi.put("/updateuserdetails/:username",convertToObjectId ,expressErrorHandler(async (req, res) => {
+userApi.put("/updateuserdetails/:username", convertToObjectId, expressErrorHandler(async (req, res) => {
 
     //get modified user
     let modifiedUser = req.body;
     //update
     //hash password
-    let hashedPassword = await bcryptjs.hash(modifiedUser.password, 7)
-    //replace password
-    modifiedUser.password = hashedPassword;
+    if (modifiedUser.password) {
+        let hashedPassword = await bcryptjs.hash(modifiedUser.password, 7)
+        //replace password
+        modifiedUser.password = hashedPassword;
+    }
     await userCollectionObj.updateOne({ username: modifiedUser.username }, { $set: { ...modifiedUser } })
     //send res
     res.send({ message: "User modified" })
@@ -133,20 +135,19 @@ userApi.post('/loginDetails', expressErrorHandler(async (req, res) => {
         }
         else {
             //create a token
-            let signedToken = jwt.sign({ username: credentials.username }, process.env.SECRET_KEY , { expiresIn: 10 })
+            let signedToken = jwt.sign({ username: credentials.username }, process.env.SECRET_KEY, { expiresIn: '7d' })
             //send token to client
             res.send({ message: "login success", token: signedToken, username: credentials.username, userObj: user })
         }
 
     }
-
-    //GET
-    //http://localhost:3000/user/primesub
-    userApi.get('/primesub', checkToken, (req, res) => {
-        res.send({ message: 'Prime Sub Authentication' })
-    })
-
 }))
+
+//GET
+//http://localhost:3000/user/primesub
+userApi.get('/primesub', checkToken, (req, res) => {
+    res.send({ message: 'Prime Sub Authentication' })
+})
 
 //export
 module.exports = userApi;

@@ -1,59 +1,340 @@
-<div class="container mt-5 mb-5">
-    <form>
-        <h3 class="fieldset-title">Personal Info</h3>
-        <div class="form-group avatar">
-            <figure class="figure col-md-2 col-sm-3 col-xs-12">
-                <img class="profile-pic" width="125px" height="125px" src={{userDetails?.profilePic}} alt="">
-            </figure>
-            <div class="form-inline col-md-12 col-sm-9 col-xs-12">
-                <input type="file">
-                <button type="button" class="btn btn-sm btn-default-alt pull-left">Update Image</button>
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-12 col-lg-10 col-xl-8">
+            <div class="header mt-md-5">
+                <div class="header-body">
+                    <div class="row align-items-center">
+                        <div class="col">
+                            <h6 class="header-pretitle">
+                                Overview
+                            </h6>
+                            <h1 class="header-title">
+                                Account
+                            </h1>
+                        </div>
+                    </div>
+                    <nav class="row align-items-center">
+                        <div class="col">
+                            <ul class="nav nav-tabs nav-overflow header-tabs">
+                                <li class="nav-item">
+                                    <a (click)="navigate('general')" routerLinkActive='active' class="nav-link">
+                                        General
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a (click)="navigate('contact')" class="nav-link">
+                                        Contact
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a (click)="navigate('shipping')" class="nav-link">
+                                        Shipping
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
             </div>
-        </div>
-        <div class="form-group">
-            <label class="col-md-2 col-sm-3 col-xs-12 control-label">User Name</label>
-            <div class="col-md-12 col-sm-9 col-xs-12">
-                <input type="text" class="form-control">
+            <div class="row justify-content-between align-items-center">
+                <div class="col">
+                    <div class="row align-items-center">
+                        <div class="col-auto">
+                            <div class="avatar">
+                                <img class="avatar-img rounded-circle mt-3" width="250px" src={{userDetails.profilePic}}
+                                    alt="...">
+                            </div>
+                        </div>
+                        <div class="col ms-n2">
+                            <h4 class="mb-1">
+                                Your avatar
+                            </h4>
+                            <small class="text-muted">
+                                PNG or JPG no bigger than 1000px wide and tall.
+                            </small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <button class="btn btn-sm btn-primary" type="button" data-bs-toggle="modal"
+                        data-bs-target="#openuploadmodal">
+                        Upload
+                    </button>
+                </div>
             </div>
-        </div>
+            <div class="modal fade" id="openuploadmodal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <form #ref="ngForm" (ngSubmit)="updateProfilePic(ref.value)">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Update Profile Pic</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+                            <div class="modal-body">
 
-        <div class="form-group">
-            <label class="col-md-2 col-sm-3 col-xs-12 control-label">First Name</label>
-            <div class="col-md-12 col-sm-9 col-xs-12">
-                <input type="text" class="form-control">
+                                <div class="mb-3">
+                                    <label for="formFileSm" class="form-label">Upload Profile Picture</label>
+                                    <div class="text-muted">Preferably square images</div>
+                                    <input class="form-control form-control-sm mt-2" name=profilePic id="formFileSm"
+                                        (change)='selectFile($event)' ngModel type="file">
+                                    <div class="d-flex justify-content-center">
+                                        <img [src]='url' class="avatar-img rounded-circle mt-3" *ngIf='showImage'
+                                            height="250px" width="250px" alt="">
+                                    </div>
+                                    <div class="text-muted" *ngIf='fileSizegt1MB'>Image size should be less than 1MB
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="submit" *ngIf='!fileSizegt1MB' class="btn btn-primary">Save
+                                    changes</button>
+                                <button type="submit" *ngIf='fileSizegt1MB' class="btn btn-primary" disabled>Save
+                                    changes</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="form-group">
-            <label class="col-md-2 col-sm-3 col-xs-12 control-label">Last Name</label>
-            <div class="col-md-12 col-sm-9 col-xs-12">
-                <input type="text" class="form-control">
+            <section id="general">
+                <hr class="my-5">
+                <form #general="ngForm" (ngSubmit)="general.form.valid && addGeneralDetails()">
+                    <div class="row">
+                        <h3>General</h3>
+                        <div class="col-12 mt-2">
+                            <div class="form-group">
+                                <label class="form-label">
+                                    User Name
+                                </label>
+                                <input type="text" class="form-control" name="username" value={{userDetails.username}}
+                                    disabled>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-2 col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">
+                                    First name
+                                </label>
+                                <input type="text" name="firstName" class="form-control"
+                                    [(ngModel)]='generalDetails.firstName' #reffirstName="ngModel" required>
+                                <p class="text-danger"
+                                    *ngIf="(general.submitted||reffirstName.touched) && reffirstName.errors?.required">
+                                    First
+                                    Name required
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-2 col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">
+                                    Last name
+                                </label>
+                                <input type="text" name="lastName" class="form-control"
+                                    [(ngModel)]='generalDetails.lastName' #reflastName="ngModel" required>
+                                <p class="text-danger"
+                                    *ngIf="(general.submitted||reflastName.touched) && reflastName.errors?.required">
+                                    Last
+                                    Name
+                                    required
+                                </p>
+                            </div>
+
+                        </div>
+                        <div class="col-12 mt-2">
+                            <div class="form-group">
+                                <label class="mb-1">
+                                    Email address
+                                </label>
+                                <small class="form-text text-muted">
+                                    This contact will be shown to others publicly, so choose it carefully.
+                                </small>
+                                <input type="email" name="email" class="form-control" placeholder={{userDetails.email}}
+                                    [(ngModel)]='generalDetails.email' #refEmail='ngModel' required>
+                                <p class="text-danger"
+                                    *ngIf="(general.submitted||refEmail.touched) && refEmail.errors?.required">Email
+                                    required
+                                </p>
+                            </div>
+
+                        </div>
+                        <div class="col-12 mt-2 col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">
+                                    Phone
+                                </label>
+                                <input type="text" name="phone" class="form-control mb-3" placeholder="+91"
+                                    inputmode="text" [(ngModel)]='generalDetails.phone' #refPhone='ngModel'
+                                    pattern="^[0-9]{10}$" required>
+                                <p class="text-danger"
+                                    *ngIf="(general.submitted||refPhone.touched) && refPhone.errors?.required">
+                                    Phone number
+                                    required</p>
+                                <p class="text-danger"
+                                    *ngIf="(general.submitted||refPhone.dirty) && refPhone.errors?.pattern">Phone
+                                    Number must be 10 digits</p>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-2 col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">
+                                    Birthday
+                                </label>
+                                <input type="date" name="birthday" class="form-control"
+                                    [(ngModel)]='generalDetails.birthday' #refBirthday='ngModel' required>
+                                <p class="text-danger"
+                                    *ngIf="(general.submitted||refBirthday.touched) && refBirthday.errors?.required">
+                                    Birthday
+                                    required</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        Save changes
+                    </button>
+                    <hr class="mt-4 mb-5">
+                </form>
+            </section>
+
+            <section id="contact">
+                <form #contact="ngForm" (ngSubmit)="addContactDetails()">
+                    <div class="row">
+                        <h3>Contact</h3>
+                        <div class="col-12 mt-2 col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">
+                                    Twitter <i class="fab fa-twitter"></i>
+                                </label>
+                                <input type="text" name="twitter" class="form-control" [(ngModel)]='contactDetails.twitter'>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-2 col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">
+                                    Linkedin <i class="fab fa-linkedin"></i>
+                                </label>
+                                <input type="text" name="linkedin" class="form-control" [(ngModel)]='contactDetails.linkedin'>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-2 col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">
+                                    Facebook <i class="fab fa-facebook"></i>
+                                </label>
+                                <input type="text" name="facebook" class="form-control" [(ngModel)]='contactDetails.facebook'>
+                            </div>
+
+                        </div>
+                        <div class="col-12 mt-2 col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">
+                                    Instagram <i class="fab fa-instagram"></i>
+                                </label>
+                                <input type="text" name="instagram" class="form-control mb-3" [(ngModel)]='contactDetails.instagram'>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        Save changes
+                    </button>
+                    <hr class="mt-4 mb-5">
+                </form>
+            </section>
+
+            <section id="shipping">
+                <form #shipping="ngForm" (ngSubmit)="addShippingDetails()">
+                    <div class="row">
+                        <h3>Shipping Address</h3>
+                        <div class="col-12 mt-2 col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">
+                                    Name
+                                </label>
+                                <input type="text" name="name" class="form-control" [(ngModel)]='shippingDetails.name'>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-2 col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">
+                                    Pincode
+                                </label>
+                                <input type="text" name="pincode" class="form-control" [(ngModel)]='shippingDetails.pincode'>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-2">
+                            <div class="form-group">
+                                <label class="form-label">
+                                    Flat, House no., Building, Company, Apartment
+                                </label>
+                                <input type="text" name="line1" class="form-control" [(ngModel)]='shippingDetails.line1'>
+                            </div>
+
+                        </div>
+                        <div class="col-12 mt-2">
+                            <div class="form-group">
+                                <label class="form-label">
+                                    Area, Colony, Street, Sector, Village
+                                </label>
+                                <input type="text" name="line2" class="form-control mb-3" [(ngModel)]='shippingDetails.line2'>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-2">
+                            <div class="form-group">
+                                <label class="form-label">
+                                    Landmark
+                                </label>
+                                <input type="text" name="landmark" class="form-control mb-3" [(ngModel)]='shippingDetails.landmark'>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-2 col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">
+                                    Town/City
+                                </label>
+                                <input type="text" name="town" class="form-control mb-3" [(ngModel)]='shippingDetails.town'>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-2 col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">
+                                    State
+                                </label>
+                                <input type="text" name="state" class="form-control mb-3" [(ngModel)]='shippingDetails.state'>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        Save changes
+                    </button>
+                    <hr class="mt-4 mb-5">
+                </form>
+            </section>
+            <div class="row justify-content-between">
+                <div class="col-12 col-md-6">
+
+                    <!-- Heading -->
+                    <h4>
+                        Delete your account
+                    </h4>
+
+                    <!-- Text -->
+                    <p class="small text-muted mb-md-0">
+                        Please note, deleting your account is a permanent action and will no be recoverable once
+                        completed.
+                    </p>
+
+                </div>
+                <div class="col-auto">
+
+                    <!-- Button -->
+                    <button class="btn btn-danger">
+                        Delete
+                    </button>
+
+                </div>
             </div>
+            <br><br>
+
         </div>
-        <h3 class="fieldset-title">Contact Info</h3>
-        <div class="form-group">
-            <label class="col-md-2  col-sm-3 col-xs-12 control-label">Email</label>
-            <div class="col-md-12 col-sm-9 col-xs-12">
-                <input type="email" class="form-control">
-                <p class="help-block">This is the email </p>
-            </div>
-        </div>
-        <div class="form-group">
-            <label class="col-md-2  col-sm-3 col-xs-12 control-label">Twitter</label>
-            <div class="col-md-12 col-sm-9 col-xs-12">
-                <input type="text" class="form-control">
-                <p class="help-block">Your twitter username</p>
-            </div>
-        </div>
-        <div class="form-group">
-            <label class="col-md-2  col-sm-3 col-xs-12 control-label">Linkedin</label>
-            <div class="col-md-12 col-sm-9 col-xs-12">
-                <input type="url" class="form-control">
-                <p class="help-block">eg. https://www.linkedin.com/in/yourname</p>
-            </div>
-        </div>
-        <hr>
-        <div class="col-md-10 col-sm-9 col-xs-12 col-md-push-2 col-sm-push-3 col-xs-push-0">
-            <input class="btn btn-primary" type="submit">
-        </div>
-    </form>
+    </div>
 </div>
