@@ -4,11 +4,13 @@ import { SearchPipe } from '../pipes/search.pipe';
 import { MinPricePipe } from '../pipes/min-price.pipe';
 import { MaxPricePipe } from '../pipes/max-price.pipe';
 import { FormsModule } from '@angular/forms';
+import { PagenotfoundComponent } from '../pagenotfound/pagenotfound.component';
 
 
 
 @NgModule({
   declarations: [
+    PagenotfoundComponent,
     SearchPipe,
     MaxPricePipe,
     MinPricePipe,
@@ -17,7 +19,8 @@ import { FormsModule } from '@angular/forms';
     SearchPipe,
     MaxPricePipe,
     MinPricePipe,
-    FormsModule
+    FormsModule,
+    PagenotfoundComponent
   ],
   imports: [
     CommonModule,

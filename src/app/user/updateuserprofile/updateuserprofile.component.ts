@@ -34,7 +34,6 @@ export class UpdateuserprofileComponent implements OnInit {
     this.UserService.getUserDetailsByName(this.userDetails.username).subscribe(
       res=>{
         this.userDetails = res['message']
-        console.log(this.userDetails);
         localStorage.setItem("userObj",JSON.stringify(res['message']))
       },
       err=>{

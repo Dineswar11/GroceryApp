@@ -7,6 +7,8 @@ import { UserComponent } from './user.component';
 import { UserprofileComponent } from './userprofile/userprofile.component';
 import { UpdateuserprofileComponent } from './updateuserprofile/updateuserprofile.component';
 import { SharedModule } from '../shared/shared.module';
+import { PaymentdetailsComponent } from './paymentdetails/paymentdetails.component';
+import { OrdersComponent } from './orders/orders.component';
 
 
 @NgModule({
@@ -14,6 +16,8 @@ import { SharedModule } from '../shared/shared.module';
     UserComponent,
     UserprofileComponent,
     UpdateuserprofileComponent,
+    PaymentdetailsComponent,
+    OrdersComponent,
   ],
   imports: [
     CommonModule,

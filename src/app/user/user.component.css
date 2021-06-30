@@ -4,7 +4,7 @@
 
 .nav-bar {
     background-color: hsl(76, 66%, 59%);
-    width: 5%;
+    min-width: 45px;
     z-index: 2;
 }
 

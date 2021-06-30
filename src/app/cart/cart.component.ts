@@ -18,13 +18,17 @@ export class CartComponent implements OnInit {
 
   constructor(private CartDS:AddtocartService,private toastr:ToastrService) { }
   ngOnInit(): void {
-    this.productsAddedToCart = this.CartDS.getTheProductsInCart()
-    console.log('Abcd')
+    if(localStorage.getItem("ItemsinCart")){
+      this.productsAddedToCart = JSON.parse(localStorage.getItem("ItemsinCart"))
+    }
+    else this.productsAddedToCart = [];
+    console.log(this.productsAddedToCart)
   }
 
   deleteItem(product,ind){
     this.CartDS.deleteProductFromCart(ind);
     this.toastr.error(product.name+' Removed from the Cart 😓')
+    this.ngOnInit()
   }
 
   totalPrice(){
