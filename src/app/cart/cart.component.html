@@ -37,11 +37,11 @@
               <h4>Description</h4>
                     <p> {{products?.description}} </p>
               <div class="text-right d-block mx-auto">
-                <button id="btn" class="btn btn-outline-danger" *ngIf="products.quantity>1" (click)="products.quantity=products.quantity-1;">
+                <button id="btn" class="btn btn-outline-danger" *ngIf="products.quantity>1" (click)="products.quantity=products.quantity-1;decreaseQuantity(ind);">
                   <i class="fas fa-minus-square"></i>
                 </button>
                 <span class="ms-2 me-2">Quantity  {{products?.quantity}}</span>
-                <button id="btn" class="btn btn-outline-success" (click)="products.quantity=products.quantity+1">
+                <button id="btn" class="btn btn-outline-success" (click)="products.quantity=products.quantity+1;increaseQuantity(ind);">
                    <i class="fas fa-plus-square"></i>
                 </button> 
               </div>

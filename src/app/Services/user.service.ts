@@ -30,7 +30,6 @@ export class UserService {
   }
 
   updateUserDetails(updateduserDetails){
-    console.log(updateduserDetails)
     return this.Httpclient.put('http://localhost:3000/user/updateuserdetails/'+updateduserDetails.username,updateduserDetails)
   }
 }
