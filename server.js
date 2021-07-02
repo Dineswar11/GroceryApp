@@ -10,11 +10,13 @@ app.use(exp.static(path.join(__dirname,'./dist/GroceryApp/')))
 const snacksApi = require('./APIs/snacksApi')
 const fruitsApi = require('./APIs/fruitsApi')
 const userApi = require('./APIs/userApi')
+const cartApi = require('./APIs/cartApi')
 
 //execute specific api based on path
 app.use("/snacks", snacksApi)
 app.use("/fruits", fruitsApi)
 app.use('/user',userApi)
+app.use('/cart',cartApi)
 
 //export mongodb
 const mc = require('mongodb').MongoClient;
@@ -37,9 +39,11 @@ mc.connect(databaseUrl, { useNewUrlParser: true, useUnifiedTopology: true }, (er
         fruitsCollectionObj = databaseObj.collection("fruitsCollection")
         snacksCollectionObj = databaseObj.collection('snacksCollection')
         userCollectionObj = databaseObj.collection("usercollection")
+        cartCollectionObj = databaseObj.collection("cartCollection")
         app.set("fruitsCollectionObj",fruitsCollectionObj)
         app.set("snacksCollectionObj",snacksCollectionObj)
         app.set("userCollectionObj",userCollectionObj)
+        app.set("cartCollectionObj",cartCollectionObj)
         console.log("connected to database")
     }
 })

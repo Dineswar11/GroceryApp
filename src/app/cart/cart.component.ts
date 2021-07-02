@@ -8,38 +8,56 @@ import { AddtocartService } from '../Services/addtocart.service';
   selector: 'app-cart',
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.css'],
-  animations:[opacity,slideright,hinge]
+  animations: [opacity, slideright, hinge]
 })
 export class CartComponent implements OnInit {
 
-  productsAddedToCart:any;
+  productsAddedToCart = [];
 
-  sum:number=0;
+  sum: number = 0;
 
-  constructor(private CartDS:AddtocartService,private toastr:ToastrService) { }
+  constructor(private CartDS: AddtocartService, private toastr: ToastrService) { }
   ngOnInit(): void {
-    if(localStorage.getItem("ItemsinCart")){
-      this.productsAddedToCart = JSON.parse(localStorage.getItem("ItemsinCart"))
+    if (localStorage.getItem("username")) {
+      this.CartDS.getProductsAfterLogin().subscribe(
+        res => {
+          this.productsAddedToCart = res['message'].cartObj
+        },
+        err => {
+          console.log(err)
+        }
+      )
     }
-    else this.productsAddedToCart = [];
-    console.log(this.productsAddedToCart)
+    else {
+      if (localStorage.getItem("ItemsinCart")) {
+        this.productsAddedToCart = JSON.parse(localStorage.getItem("ItemsinCart"))
+      }
+      else this.productsAddedToCart = [];
+    }
   }
 
-  deleteItem(product,ind){
+  increaseQuantity(ind){
+    this.CartDS.updateQuantity(ind,'a')
+  }
+
+  decreaseQuantity(ind){
+    this.CartDS.updateQuantity(ind,'s')
+  }
+
+  deleteItem(product, ind) {
     this.CartDS.deleteProductFromCart(ind);
-    this.toastr.error(product.name+' Removed from the Cart 😓')
+    this.toastr.error(product.name + ' Removed from the Cart 😓')
     this.ngOnInit()
   }
 
-  totalPrice(){
-    this.sum=0;
-    for(let products of this.productsAddedToCart){
-      this.sum=this.sum+(products.sale_price)*(products.quantity)
+  totalPrice() {
+    this.sum = 0;
+    for (let products of this.productsAddedToCart) {
+      this.sum = this.sum + (products.sale_price) * (products.quantity)
     }
-    console.log(this.sum)
     this.ngOnInit();
   }
-  
+
 }
 
 

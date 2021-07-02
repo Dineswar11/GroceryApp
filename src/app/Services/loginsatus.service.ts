@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
+import { AddtocartService } from './addtocart.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoginsatusService {
 
-  constructor() { }
+  constructor(private CartDs:AddtocartService) { }
 
   loginStatus():number{
     if(localStorage.getItem("username")==null){
@@ -21,5 +22,8 @@ export class LoginsatusService {
 
   logout(){
     localStorage.clear();
+    let itemsInCart = this.CartDs.productsAddedToCart;
+    localStorage.setItem('ItemsinCart',JSON.stringify(itemsInCart))
+    this.CartDs.updateObservable(itemsInCart)
   }
 }

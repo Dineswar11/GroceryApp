@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { slideleft, slideright } from '../animation';
 import { registerclass } from '../Models/register.model';
+import { AddtocartService } from '../Services/addtocart.service';
 import { UserService } from '../Services/user.service';
 
 @Component({
@@ -17,7 +18,7 @@ export class RegisterComponent implements OnInit {
 
   showPassword: boolean = true;
 
-  constructor(private userService: UserService, private Router: Router,private toastr:ToastrService) { }
+  constructor(private userService: UserService, private Router: Router,private toastr:ToastrService,private CartDs:AddtocartService) { }
 
   ngOnInit(): void {
   }
@@ -36,7 +37,15 @@ export class RegisterComponent implements OnInit {
           this.toastr.success('New User Created.')
           this.Router.navigateByUrl('/login')
         }
-        else this.toastr.error(res.message)
+        else {this.toastr.error(res.message)}
+        this.CartDs.createCartinDB(this.registerDetails.username).subscribe(
+          res=>{
+            console.log(res)
+          },
+          err=>{
+            console.log('err in creating cartObj',err)
+          }
+        )
       },
       err => {
         console.log(err)
