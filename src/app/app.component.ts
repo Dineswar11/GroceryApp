@@ -20,23 +20,19 @@ export class AppComponent implements OnInit {
   username = localStorage.getItem("username")
 
   ngOnInit() {
+    this.CartDS.updateObservable(0)
     if (localStorage.getItem("ItemsinCart")) {
       this.productsInCart = JSON.parse(localStorage.getItem("ItemsinCart"))
       this.CartDS.updateObservable(this.productsInCart)
-
-      this.CartDS.dataObservable.subscribe(
-        prodObj => {
-          this.numberOfProductsAdded = prodObj.length
-        }
-      )
     }
     else {
-      localStorage.setItem('ItemsinCart',JSON.stringify(this.productsInCart))
+      localStorage.setItem('ItemsinCart', JSON.stringify(this.productsInCart))
+      this.CartDS.updateObservable(this.productsInCart)
     }
-  }
-
-  navigate() {
-    // this.Router.navigateByUrl('/userprofile/'+this.username)
-    this.Router.navigateByUrl('/user')
+    this.CartDS.dataObservable.subscribe(
+      prodObj => {
+        this.numberOfProductsAdded = prodObj.length
+      }
+    )
   }
 }

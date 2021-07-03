@@ -10,11 +10,11 @@
     </div>
 </div>
 
-<div class="container">
+<div data-aos="fade-up" class="container">
     <div class="features mt-4">
         <h3 id="features" class="text-center p-2 shadow ">Features</h3>
         <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-3 ">
-            <div class="col ">
+            <div data-aos="flip-left" data-aos-duration="800" class="col ">
                 <div class="card shake shadow">
                     <div id="card" class="card-body">
                         <div class="d-flex justify-content-center mb-2">
@@ -31,7 +31,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col">
+            <div data-aos="flip-down" data-aos-duration="800" data-aos-delay="200" class="col">
                 <div class="card shake shadow">
                     <div id="card" class="card-body">
                         <div class="d-flex justify-content-center mb-2">
@@ -46,7 +46,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col shake">
+            <div data-aos="flip-right" data-aos-duration="800" data-aos-delay="400" class="col shake">
                 <div class="card shadow">
                     <div id="card" class="card-body">
                         <div class="d-flex justify-content-center mb-2">
@@ -69,7 +69,8 @@
     </div>
     <!-- Shop Now!! -->
     <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-2 mt-4">
-        <div class="col">
+        <div data-aos="fade-right"
+        data-aos-anchor-placement="bottom-bottom" class="col">
             <a routerLink="/snacks">
                 <div class="card snacks shadow">
                     <div class="card-body">
@@ -82,7 +83,8 @@
                 </div>
             </a>
         </div>
-        <div class="col">
+        <div data-aos="fade-left"
+        data-aos-anchor-placement="bottom-bottom" class="col">
             <a routerLink="/fruits-vegitables">
                 <div class="card fruits shadow">
                     <div class="card-body">
@@ -98,8 +100,9 @@
     </div>
     <!-- Why Choose Us -->
     <h3 id="whyus" class="mt-4 p-2 shadow">Why Choose Us?</h3>
-    <div class="row row-cols-1 row-cols-sm-1 row-cols-md-3 row-cols-lg-3">
-        <div class="col">
+    <div data-aos="fade-down" class="row row-cols-1 row-cols-sm-1 row-cols-md-3 row-cols-lg-3">
+        <div data-aos="fade-up"
+        data-aos-delay="200" class="col">
             <div class="card">
                 <div class="card-body farmers d-flex justify-content-center align-items-center flex-column">
                     <h4 class="text-white">Supports local farmers</h4>
@@ -107,7 +110,8 @@
                 </div>
             </div>
         </div>
-        <div class="col">
+        <div data-aos="fade-up"
+        data-aos-delay="400" class="col">
             <div class="card">
                 <div class="card-body variety d-flex justify-content-center align-items-center flex-column">
                     <h4 class="text-dark">Variety of Products</h4>
@@ -115,7 +119,8 @@
                 </div>
             </div>
         </div>
-        <div class="col">
+        <div data-aos="fade-up"
+        data-aos-delay="600" class="col">
             <div class="card">
                 <div class="card-body price d-flex justify-content-center align-items-center flex-column">
                     <h4 class="text-white">Reasonable Prices</h4>
@@ -124,7 +129,7 @@
             </div>
         </div>
     </div>
-    <div class="d-flex justify-content-center">
+    <div data-aos="example-anim1" data-aos-anchor-placement="center-center" class="d-flex justify-content-center">
         <button id="shopnow" class="btn shadow mt-3"> <a routerLink="/snacks">Shop Now!!</a></button>
     </div>
 </div>
@@ -211,7 +216,7 @@
                 </ul>
             </div>
             <div class="col-6">
-                <div id="emailcard" class="card">
+                <div data-aos="flip-up" data-aos-duration="1000" id="emailcard" class="card">
                     <div class="card-body">
                         <h2>Subscribe to our Newsletter</h2>
                         <form #ref="ngForm" (ngSubmit)="ref.form.valid && addNewLetterSubscription()">
