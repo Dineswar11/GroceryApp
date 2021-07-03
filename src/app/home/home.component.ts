@@ -3,6 +3,7 @@ import { ToastrService } from 'ngx-toastr';
 import Typewriter from 't-writer.js'
 import { userClass } from '../Models/user.model';
 import { NewslettersubscriptionService } from '../Services/newslettersubscription.service';
+import AOS from 'aos'
 
 @Component({
   selector: 'app-home',
@@ -19,6 +20,7 @@ export class HomeComponent implements OnInit , AfterViewInit{
   constructor(private newsletterSub:NewslettersubscriptionService,private toastr:ToastrService) { }
 
   ngOnInit(): void {
+    AOS.init();
   }
 
   ngAfterViewInit(){

@@ -14,7 +14,7 @@ export class UserGuard implements CanActivate {
     if(this.LoginService.loginStatus() === 2){
       return true
     }
-    else this.router.navigateByUrl('notfound'); return false 
+    else this.router.navigateByUrl('login'); return false 
   }
   
 }

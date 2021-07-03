@@ -21,21 +21,21 @@ export class AddtocartService {
     this.dataSource.next(data)
   }
 
-  async updateProductsIncart(productsAddedToCart) {
+  updateProductsIncart(productsAddedToCart) {
     localStorage.setItem('ItemsinCart', JSON.stringify(productsAddedToCart))
     if (localStorage.getItem("username")) {
-      await this.getProductsAfterLogin().subscribe(
+      this.getProductsAfterLogin().subscribe(
         res => {
           this.cartDetails = res['message']
+          this.cartDetails.cartObj = productsAddedToCart
+          this.updateCartInDB(this.cartDetails).subscribe(
+            res => { },
+            err => { }
+          )
         },
         err => {
 
         }
-      )
-      this.cartDetails.cartObj = productsAddedToCart
-      this.updateCartInDB(this.cartDetails).subscribe(
-        res => { },
-        err => { }
       )
     }
   }
