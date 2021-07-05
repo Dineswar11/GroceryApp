@@ -1,0 +1,17 @@
+.card{
+    background-color: #b7db51;
+    border: 5px dashed black;
+    border-style: dashed;
+}
+
+i{
+    font-size: 100px;
+    width: 100px;
+    min-width: 75px;
+    max-width: 150px;
+    display: block;
+}
+
+.bold{
+    font-weight: bold;
+}

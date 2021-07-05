@@ -11,3 +11,11 @@
 #btn{
     border-radius: 50%;
 }
+
+.bg-green{
+    background-color: hsl(76, 66%, 59%);
+}
+
+.bg-orange{
+    background-color: #f29366;
+}

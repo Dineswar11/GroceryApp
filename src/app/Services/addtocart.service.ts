@@ -38,6 +38,7 @@ export class AddtocartService {
         }
       )
     }
+    this.updateObservable(this.productsAddedToCart);
   }
 
   newProductAddedToCart(newProduct) {
