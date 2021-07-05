@@ -3,10 +3,12 @@
 }
 
 .nav-bar {
-    background-color: hsl(76, 66%, 59%);
-    min-width: 45px;
+    background-color: #b7db51;
+    min-width: 20px;
+    width: 45px;
     max-width: 45px;
     z-index: 2;
+    position: relative;
 }
 
 .navbar-nav {
@@ -46,7 +48,9 @@
 }
 
 svg{
-    color :hsl(181, 100%, 16%)
+    font-size: 10px;
+    color :hsl(181, 100%, 16%);
+    margin: auto;
 }
 
 svg:hover{
@@ -60,7 +64,8 @@ svg:hover{
 
 .nav-item:hover .link-text {
     display: block;
-    left: 50px;
+    left: 100%;
+    top: 5%;
     animation: scale-in-left 200ms ease-in both;
 }
 

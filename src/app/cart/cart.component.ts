@@ -18,6 +18,14 @@ export class CartComponent implements OnInit {
 
   constructor(private CartDS: AddtocartService, private toastr: ToastrService) { }
   ngOnInit(): void {
+    this.CartDS.dataObservable.subscribe(
+      res=>{
+        this.sum = 0;
+        for(let products of res){
+          this.sum = this.sum + (products.sale_price) * (products.quantity)
+        }
+      }
+    )
     if (localStorage.getItem("username")) {
       this.CartDS.getProductsAfterLogin().subscribe(
         res => {
@@ -51,11 +59,11 @@ export class CartComponent implements OnInit {
   }
 
   totalPrice() {
-    this.sum = 0;
-    for (let products of this.productsAddedToCart) {
-      this.sum = this.sum + (products.sale_price) * (products.quantity)
-    }
-    this.ngOnInit();
+    // this.sum = 0;
+    // for (let products of this.productsAddedToCart) {
+    //   this.sum = this.sum + (products.sale_price) * (products.quantity)
+    // }
+    // this.ngOnInit();
   }
 
 }
