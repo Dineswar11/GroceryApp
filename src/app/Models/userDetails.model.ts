@@ -31,8 +31,6 @@ export class shippingDetails {
 
 export class paymentDetails {
     constructor(
-        public paypal : boolean,
-        public creditcard : boolean,
         public cardnumber : string,
         public name : string,
         public expirydate : string,

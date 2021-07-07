@@ -197,7 +197,7 @@
             </section>
 
             <section id="contact">
-                <form #contact="ngForm" (ngSubmit)="addContactDetails()">
+                <form #contact="ngForm" (ngSubmit)="contact.form.valid && addContactDetails()">
                     <div class="row">
                         <h3>Contact</h3>
                         <div class="col-12 mt-2 col-md-6">
@@ -205,7 +205,12 @@
                                 <label class="form-label">
                                     Twitter <i class="fab fa-twitter"></i>
                                 </label>
-                                <input type="text" name="twitter" class="form-control" [(ngModel)]='contactDetails.twitter'>
+                                <input type="text" name="twitter" class="form-control"  #reftwitter="ngModel" required [(ngModel)]='contactDetails.twitter'>
+                                <p class="text-danger"
+                                    *ngIf="(contact.submitted||reftwitter.touched) && reftwitter.errors?.required">
+                                    Twitter
+                                    URL required
+                                </p>
                             </div>
                         </div>
                         <div class="col-12 mt-2 col-md-6">
@@ -213,7 +218,12 @@
                                 <label class="form-label">
                                     Linkedin <i class="fab fa-linkedin"></i>
                                 </label>
-                                <input type="text" name="linkedin" class="form-control" [(ngModel)]='contactDetails.linkedin'>
+                                <input type="text" name="linkedin" class="form-control" #reflinkedin="ngModel" required [(ngModel)]='contactDetails.linkedin'>
+                                <p class="text-danger"
+                                    *ngIf="(contact.submitted||reflinkedin.touched) && reflinkedin.errors?.required">
+                                    Linkedin
+                                    URL required
+                                </p>
                             </div>
                         </div>
                         <div class="col-12 mt-2 col-md-6">
@@ -221,7 +231,12 @@
                                 <label class="form-label">
                                     Facebook <i class="fab fa-facebook"></i>
                                 </label>
-                                <input type="text" name="facebook" class="form-control" [(ngModel)]='contactDetails.facebook'>
+                                <input type="text" name="facebook" class="form-control" #reffacebook="ngModel" required [(ngModel)]='contactDetails.facebook'>
+                                <p class="text-danger"
+                                    *ngIf="(contact.submitted||reffacebook.touched) && reffacebook.errors?.required">
+                                    Facebook
+                                    URL required
+                                </p>
                             </div>
 
                         </div>
@@ -230,7 +245,12 @@
                                 <label class="form-label">
                                     Instagram <i class="fab fa-instagram"></i>
                                 </label>
-                                <input type="text" name="instagram" class="form-control mb-3" [(ngModel)]='contactDetails.instagram'>
+                                <input type="text" name="instagram" class="form-control mb-3" #refinstagram="ngModel" required [(ngModel)]='contactDetails.instagram'>
+                                <p class="text-danger"
+                                    *ngIf="(contact.submitted||refinstagram.touched) && refinstagram.errors?.required">
+                                    Instagram
+                                    URL required
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -242,7 +262,7 @@
             </section>
 
             <section id="shipping">
-                <form #shipping="ngForm" (ngSubmit)="addShippingDetails()">
+                <form #shipping="ngForm" (ngSubmit)="shipping.form.valid && addShippingDetails()">
                     <div class="row">
                         <h3>Shipping Address</h3>
                         <div class="col-12 mt-2 col-md-6">
@@ -250,7 +270,11 @@
                                 <label class="form-label">
                                     Name
                                 </label>
-                                <input type="text" name="name" class="form-control" [(ngModel)]='shippingDetails.name'>
+                                <input type="text" name="name" class="form-control"  required #refname='ngModel' [(ngModel)]='shippingDetails.name'>
+                                <p class="text-danger"
+                                    *ngIf="(shipping.submitted||refname.touched) && refname.errors?.required">
+                                    Name required
+                                </p>
                             </div>
                         </div>
                         <div class="col-12 mt-2 col-md-6">
@@ -258,7 +282,11 @@
                                 <label class="form-label">
                                     Pincode
                                 </label>
-                                <input type="text" name="pincode" class="form-control" [(ngModel)]='shippingDetails.pincode'>
+                                <input type="text" name="pincode" class="form-control" required #refpincode='ngModel' [(ngModel)]='shippingDetails.pincode'>
+                                <p class="text-danger"
+                                    *ngIf="(shipping.submitted||refpincode.touched) && refpincode.errors?.required">
+                                    Pincode required
+                                </p>
                             </div>
                         </div>
                         <div class="col-12 mt-2">
@@ -266,7 +294,11 @@
                                 <label class="form-label">
                                     Flat, House no., Building, Company, Apartment
                                 </label>
-                                <input type="text" name="line1" class="form-control" [(ngModel)]='shippingDetails.line1'>
+                                <input type="text" name="line1" class="form-control" required #refline1='ngModel' [(ngModel)]='shippingDetails.line1'>
+                                <p class="text-danger"
+                                    *ngIf="(shipping.submitted||refline1.touched) && refline1.errors?.required">
+                                    Line1 required
+                                </p>
                             </div>
 
                         </div>
@@ -275,7 +307,11 @@
                                 <label class="form-label">
                                     Area, Colony, Street, Sector, Village
                                 </label>
-                                <input type="text" name="line2" class="form-control mb-3" [(ngModel)]='shippingDetails.line2'>
+                                <input type="text" name="line2" class="form-control mb-3" required #refline2='ngModel' [(ngModel)]='shippingDetails.line2'>
+                                <p class="text-danger"
+                                    *ngIf="(shipping.submitted||refline2.touched) && refline2.errors?.required">
+                                    Line2 required
+                                </p>
                             </div>
                         </div>
                         <div class="col-12 mt-2">
@@ -283,7 +319,11 @@
                                 <label class="form-label">
                                     Landmark
                                 </label>
-                                <input type="text" name="landmark" class="form-control mb-3" [(ngModel)]='shippingDetails.landmark'>
+                                <input type="text" name="landmark" class="form-control mb-3" required #reflandmark='ngModel' [(ngModel)]='shippingDetails.landmark'>
+                                <p class="text-danger"
+                                    *ngIf="(shipping.submitted||reflandmark.touched) && reflandmark.errors?.required">
+                                    Landmark required
+                                </p>
                             </div>
                         </div>
                         <div class="col-12 mt-2 col-md-6">
@@ -291,7 +331,11 @@
                                 <label class="form-label">
                                     Town/City
                                 </label>
-                                <input type="text" name="town" class="form-control mb-3" [(ngModel)]='shippingDetails.town'>
+                                <input type="text" name="town" class="form-control mb-3" required #reftown='ngModel' [(ngModel)]='shippingDetails.town'>
+                                <p class="text-danger"
+                                    *ngIf="(shipping.submitted||reftown.touched) && reftown.errors?.required">
+                                    Town required
+                                </p>
                             </div>
                         </div>
                         <div class="col-12 mt-2 col-md-6">
@@ -299,7 +343,11 @@
                                 <label class="form-label">
                                     State
                                 </label>
-                                <input type="text" name="state" class="form-control mb-3" [(ngModel)]='shippingDetails.state'>
+                                <input type="text" name="state" class="form-control mb-3" required #refstate='ngModel' [(ngModel)]='shippingDetails.state'>
+                                <p class="text-danger"
+                                    *ngIf="(shipping.submitted||refstate.touched) && refstate.errors?.required">
+                                    State required
+                                </p>
                             </div>
                         </div>
                     </div>
