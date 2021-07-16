@@ -108,4 +108,8 @@ export class AddtocartService {
     }
     return this.httpClient.post('http://localhost:3000/cart/createcartobj', newObj)
   }
+
+  verifyPromo(promo) {
+    return this.httpClient.get('http://localhost:3000/promo/getpromocode/'+promo)
+  }
 }

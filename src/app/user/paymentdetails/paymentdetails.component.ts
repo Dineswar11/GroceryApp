@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 import { paymentDetails } from 'src/app/Models/userDetails.model';
 import { UserService } from 'src/app/Services/user.service';
 
@@ -17,9 +18,9 @@ export class PaymentdetailsComponent implements OnInit {
 
   paymentArray;
 
-  constructor(private UserService:UserService) { }
+  constructor(private UserService:UserService,private toastr : ToastrService) { }
 
-  ngOnInit(): void {
+  ngOnInit(){
     this.userInfo = JSON.parse(localStorage.getItem('userObj'))
     this.UserService.getUserDetailsByName(this.userInfo.username).subscribe(
       res=>{
@@ -46,13 +47,14 @@ export class PaymentdetailsComponent implements OnInit {
     }
     this.UserService.updateUserDetails(updatedUserDetails).subscribe(
       res=>{
-        alert(res['message'])
+        this.toastr.success('Added Card 😊')
         this.ngOnInit()
       },
       err=>{
 
       }
     )
+    this.ngOnInit()
   }
 
 }
