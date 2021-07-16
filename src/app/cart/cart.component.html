@@ -201,9 +201,19 @@
       </div>
       <div class="col-lg-4 col-md-5 mt-2">
         <div class="rounded-3 bg-green px-3 px-sm-4 py-4 mt-2 sticky-top">
-          <div class="text-center mb-4 pb-3 border-bottom">
+          <div *ngIf='!validPromo' class="text-center mb-4 pb-3 border-bottom">
             <h3 class="h5 mb-3 pb-1">Total</h3>
             <h4 class="fw-normal">{{sum | currency:'INR'}}</h4>
+          </div>
+          <div *ngIf='validPromo' class="text-center mb-4 pb-3 border-bottom">
+            <h3 class="h5 mb-3 pb-1">Total</h3>
+            <div *ngIf='minimunOrder'>
+              <h4 class="fw-normal"><s>{{sum | currency:'INR'}}</s></h4>
+              <h4 class="fw-normal"> {{sumAfterDisc | currency:'INR'}} </h4>
+            </div>
+            <div *ngIf='!minimunOrder'>
+              <h4 class="fw-normal">{{sum | currency:'INR'}}</h4>
+            </div>
           </div>
           <div class="mb-4">
             <label class="form-label mb-3" for="order-comments"><span
@@ -211,14 +221,15 @@
             <textarea class="form-control" rows="4" id="order-comments"></textarea>
           </div>
           <h3 class="h6 mb-4">Apply promo code</h3>
-          <form class="needs-validation">
+          <form #promoCode="ngForm" (ngSubmit)='promoCode.form.valid && verfiyPromoCode(promoCode.value)'>
             <div class="mb-3">
-              <input class="form-control" type="text" placeholder="Promo code" required="">
-              <div class="invalid-feedback">Please provide promo code.</div>
+              <input class="form-control" type="text" name="Promo" #refPromoCode="ngModel" placeholder="Promo code" required ngModel>
+              <div class="invalid-feedback" *ngIf='(promoCode.submitted||refPromoCode.touched) && refPromoCode.errors?.required'>Please provide promo code.</div>
+              <div *ngIf='validPromo && !minimunOrder' class="small mt-2 text-danger">{{ couponDetails?.promoName }} cannot be applied for orders less than {{ couponDetails?.minimunOrder | currency:'INR' }} </div>
             </div>
             <button class="bt d-block bg-orange w-100" type="submit">Apply promo code</button>
-          </form><a class="btn btn-shadow bg-orange d-block w-100 mt-4 mb-3" href="food-delivery-checkout.html"><i
-              class="ci-card fs-lg me-2"></i>Proceed to Checkout</a>
+          </form>
+          <a class="btn btn-shadow bg-orange d-block w-100 mt-4 mb-3" (click)='navigateToCheckout()' >Proceed to Checkout</a>
         </div>
       </div>
     </div>

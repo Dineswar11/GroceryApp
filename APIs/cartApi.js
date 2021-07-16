@@ -15,10 +15,10 @@ cartApi.use((req, res, next) => {
 
 //GET
 //http://localhost:3000/cart/getcartitems
-cartApi.get('/getcartitems', ErrorHandler(async (req, res) => {
-    let cartList = await cartCollectionObj.find().toArray()
-    res.send({ message: cartList })
-}))
+// cartApi.get('/getcartitems', ErrorHandler(async (req, res) => {
+//     let cartList = await cartCollectionObj.find().toArray()
+//     res.send({ message: cartList })
+// }))
 
 //GET
 //http://localhost:3000/cart/getcartitems/:username

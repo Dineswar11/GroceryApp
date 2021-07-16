@@ -29,7 +29,8 @@ export class RegisterComponent implements OnInit {
       email: this.registerDetails.email,
       password: this.registerDetails.password,
       profilePic : this.registerDetails.profilePic,
-      headerPic : this.registerDetails.headerPic
+      headerPic : this.registerDetails.headerPic,
+      paymentDetails : []
     }
     this.userService.register(newUserDetails).subscribe(
       res => {
